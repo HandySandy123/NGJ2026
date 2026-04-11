@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eih3i0n17dhb"
-path="res://.godot/imported/Mountain.png-c5c68ef851045bbeaca4172d89cca3a1.ctex"
+uid="uid://ba5wxg172bu5q"
+path="res://.godot/imported/BigBG.png-4c83bd4097c51b4b049df19e8b67881d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/Mountain.png"
-dest_files=["res://.godot/imported/Mountain.png-c5c68ef851045bbeaca4172d89cca3a1.ctex"]
+source_file="res://Art WIP/Dummy assets/Anims/BigBG.png"
+dest_files=["res://.godot/imported/BigBG.png-4c83bd4097c51b4b049df19e8b67881d.ctex"]
 
 [params]
 

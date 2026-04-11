@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckwhabmkasps"
-path="res://.godot/imported/WaterFall.png-52c5d1a26eca0a186c17931e245d22f7.ctex"
+uid="uid://dbrg6gwoxnerv"
+path="res://.godot/imported/4MicrowaveOopenAnimated2.png-9a908d484134bfc9a864f6eeacbae680.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/WaterFall.png"
-dest_files=["res://.godot/imported/WaterFall.png-52c5d1a26eca0a186c17931e245d22f7.ctex"]
+source_file="res://Art WIP/Dummy assets/BG Elements/4MicrowaveOopenAnimated2.png"
+dest_files=["res://.godot/imported/4MicrowaveOopenAnimated2.png-9a908d484134bfc9a864f6eeacbae680.ctex"]
 
 [params]
 

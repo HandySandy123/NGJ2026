@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2vc0u0jub6hm"
-path="res://.godot/imported/LavaFall.png-d3c5a58cca9ef0b4908b420859d87824.ctex"
+uid="uid://cwrmek0q0tpby"
+path="res://.godot/imported/Water.png-91b413d5cac5f6ca404daf72ec5c0c47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/LavaFall.png"
-dest_files=["res://.godot/imported/LavaFall.png-d3c5a58cca9ef0b4908b420859d87824.ctex"]
+source_file="res://Art WIP/PhysicsOBJECTS/Water.png"
+dest_files=["res://.godot/imported/Water.png-91b413d5cac5f6ca404daf72ec5c0c47.ctex"]
 
 [params]
 

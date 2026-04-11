@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4yfe00t1en4s"
-path="res://.godot/imported/SteamM.png-b99e2b9558d49014ac2117dff5a1c29c.ctex"
+uid="uid://bkmud6pighky8"
+path="res://.godot/imported/LavaWell.png-98817c7a534567efb09157e0e5e51b3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/SteamM.png"
-dest_files=["res://.godot/imported/SteamM.png-b99e2b9558d49014ac2117dff5a1c29c.ctex"]
+source_file="res://Art WIP/PhysicsOBJECTS/LavaWell.png"
+dest_files=["res://.godot/imported/LavaWell.png-98817c7a534567efb09157e0e5e51b3d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c88p037kfuryx"
-path="res://.godot/imported/AcidCloud.png-529eb869a977384590bbd82a4cb068b2.ctex"
+uid="uid://sk52olt3av61"
+path="res://.godot/imported/4MicrowaveOopenAnimated1.png-d3e3d8da599b645322ca253cee663cea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/AcidCloud.png"
-dest_files=["res://.godot/imported/AcidCloud.png-529eb869a977384590bbd82a4cb068b2.ctex"]
+source_file="res://Art WIP/Dummy assets/BG Elements/4MicrowaveOopenAnimated1.png"
+dest_files=["res://.godot/imported/4MicrowaveOopenAnimated1.png-d3e3d8da599b645322ca253cee663cea.ctex"]
 
 [params]
 
