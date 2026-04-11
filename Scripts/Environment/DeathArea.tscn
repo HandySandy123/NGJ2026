@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bdy7l7iw6qh1x"]
+
+[ext_resource type="Script" uid="uid://b3ffcrpjt82ei" path="res://Scripts/Environment/DeathArea.cs" id="1_yjyrt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i8l8x"]
+
+[node name="DeathArea" type="Area2D" unique_id=1560507486]
+script = ExtResource("1_yjyrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1755613614]
+shape = SubResource("WorldBoundaryShape2D_i8l8x")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]

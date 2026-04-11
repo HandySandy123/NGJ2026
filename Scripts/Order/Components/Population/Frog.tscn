@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://p5h81q42c210"]
+
+[ext_resource type="Script" uid="uid://dmlmlv4i80ogc" path="res://Scripts/Order/Components/Population/Frogs.cs" id="1_yxu3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxu3o"]
+size = Vector2(2, 2)
+
+[node name="Frog" type="Node2D" unique_id=64494044 node_paths=PackedStringArray("Body", "sprite")]
+script = ExtResource("1_yxu3o")
+Body = NodePath("RigidBody2D")
+sprite = NodePath("RigidBody2D/Sprite2D")
+hopTime = 2.0
+metadata/_edit_pinned_properties_ = [&"Body"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=536090840]
+gravity_scale = 0.02
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=88049620]
+shape = SubResource("RectangleShape2D_yxu3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1891871231]
