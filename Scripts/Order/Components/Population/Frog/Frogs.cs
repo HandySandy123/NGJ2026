@@ -14,31 +14,37 @@ public partial class Frogs : Population
         new Color(0.00000f,  1.00000f,  0.48627f),
     };
 
-    private Timer timer = new Timer();
-    [Export] RigidBody2D Body;
+    [Export] private Timer timer = new Timer();
+    [Export] FrogBody Body;
     
 
     public override void _Ready()
     {
-        AddChild(timer);
-        timer.Autostart = true;
-        timer.OneShot = false;
+        PopName = "Frogs";
         timer.WaitTime = hopTime;
 
     }
 
+    protected override void CreateTexture(Color color, int X, int Y)
+    {
+        var img = Image.CreateEmpty(1, 1, false, Image.Format.Rgb8);
+        img.Fill(color);
+        sprite.Texture = ImageTexture.CreateFromImage(img);
+    }
+
     public override void _Process(double delta)
     {
-        if(timer.TimeLeft <= 0)
+        if (!(timer.TimeLeft < 0))
         {
             Hop();
-            timer.Start();
+            timer.Start(hopTime);
         }
+        
     }
     
     public override void Spawn(int X, int Y)
     {
-        CreateTexture(ChooseColor());
+        CreateTexture(ChooseColor(), 0, 0);
         Position = new Vector2(X, Y);
     }
 
@@ -56,10 +62,14 @@ public partial class Frogs : Population
 
     protected override void Hop()
     {
-        var X = GameManager.Instance.Random.NextDouble() * hopForce;
-        var Y = GameManager.Instance.Random.NextDouble() * hopForce;
-        var vector = new Vector2((float)X, (float)Y);
-        GD.Print(vector);
-        if(Body != null) Body.LinearVelocity = vector;
+        var X = (float)GameManager.Instance.Random.Next(-10, 10)/10 * hopForce;
+        var Y =(float) -GameManager.Instance.Random.NextDouble() * hopForce;
+        var vector = new Vector2(X, Y);
+        //GD.Print(vector);
+        if(Body != null)
+        {
+            GD.Print("hopping");
+            Body.velocity += vector;
+        }
     }
 }

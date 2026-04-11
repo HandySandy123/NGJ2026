@@ -10,14 +10,16 @@ public partial class PopulationBrush : Node2D
     private float density = 0.3f;
     [Export] private int resolution = 10;
     private Vector2 center;
-    private GameManager gameManager;
     [Export] private PackedScene _activePopulation;
     static readonly Random random = new Random();
     public override void _Ready()
     {
-        gameManager = GetNode<GameManager>("/root/GameManager");
-        if(gameManager == null) GD.Print("Err: no GameManager");
-        _activePopulation = GD.Load<PackedScene>("res://Scripts/Order/Components/Population/Frog.tscn");
+        
+    }
+
+    public void requestPopulation(string name)
+    {
+        
     }
 
     // public void setPopulation(Node population)
@@ -27,8 +29,7 @@ public partial class PopulationBrush : Node2D
 
     public override void _Process(double delta)
     {
-        gameManager = GetNode<GameManager>("/root/GameManager");
-        center = gameManager.MousePosition;
+        center = GameManager.Instance.MousePosition;
         Position = center;
         if (Input.IsActionPressed("OnClick"))
         {
@@ -42,7 +43,9 @@ public partial class PopulationBrush : Node2D
                 case "Frogs": 
                     node = (Frogs) node;
                     break;
-                
+                case "HotBabes":
+                    node = (HotBabes) node;
+                    break;
             }
             
             AddSibling(node);
