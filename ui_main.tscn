@@ -46,6 +46,13 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.15
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")
 
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Planet Creation" unique_id=710425091]
+z_index = 1
+layout_mode = 2
+texture = ExtResource("7_thl0w")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="Orb + Arrow Container" type="PanelContainer" parent="MarginContainer/HBoxContainer/Planet Creation" unique_id=1995866098]
 layout_mode = 2
 size_flags_vertical = 8
@@ -62,15 +69,10 @@ stretch_mode = 0
 
 [node name="Orb" type="TextureButton" parent="MarginContainer/HBoxContainer/Planet Creation/Orb + Arrow Container" unique_id=627713433]
 layout_mode = 2
+size_flags_horizontal = 0
 texture_normal = ExtResource("2_wnbce")
 texture_pressed = ExtResource("3_6o1qn")
 texture_hover = ExtResource("4_7e8md")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Planet Creation" unique_id=710425091]
-layout_mode = 2
-texture = ExtResource("7_thl0w")
-expand_mode = 1
-stretch_mode = 4
 
 [node name="LongButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1965271256]
 visible = false
