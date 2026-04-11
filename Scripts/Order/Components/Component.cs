@@ -2,7 +2,7 @@ using Godot;
 
 namespace NGJ2026.Scripts.Order.Components;
 
-public partial class Components : Node2D
+public partial class Component : Node2D
 {
     [Export] private float SlimeDustScore;
     [Export] private float FunnyScaryScore;

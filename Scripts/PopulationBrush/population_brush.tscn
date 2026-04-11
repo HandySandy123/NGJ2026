@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cu2fat4qwoqpj"]
+
+[ext_resource type="Script" uid="uid://b4yupop6w4tws" path="res://Scripts/PopulationBrush/PopulationBrush.cs" id="1_c45l0"]
+
+[node name="PopulationBrush" type="Node2D" unique_id=1367516449]
+script = ExtResource("1_c45l0")
