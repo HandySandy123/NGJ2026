@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bawe8nbnt3vxn"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://background.tscn" id="1_nvfit"]
+
+[node name="SceneSetup" type="Node2D" unique_id=1737386579]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1238075410]
+
+[node name="Background" parent="Camera2D" unique_id=1711593448 instance=ExtResource("1_nvfit")]
