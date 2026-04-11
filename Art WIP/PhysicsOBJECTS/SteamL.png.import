@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxak7x45vnun4"
-path="res://.godot/imported/SteamL.png-6b2ae83727edc1196d5a5b89129d4615.ctex"
+uid="uid://vv3laqbdfcit"
+path="res://.godot/imported/SteamL.png-0b0d4eaf1c7fcaecb41d173e673534c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/SteamL.png"
-dest_files=["res://.godot/imported/SteamL.png-6b2ae83727edc1196d5a5b89129d4615.ctex"]
+source_file="res://Art WIP/PhysicsOBJECTS/SteamL.png"
+dest_files=["res://.godot/imported/SteamL.png-0b0d4eaf1c7fcaecb41d173e673534c4.ctex"]
 
 [params]
 

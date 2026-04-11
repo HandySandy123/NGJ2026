@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bldnvklpyvp25"
-path="res://.godot/imported/LavaWell.png-8ae76d34e615ef878a2b605927e1ab0b.ctex"
+uid="uid://cducx7ulubnt5"
+path="res://.godot/imported/SteamS.png-f4e9887cfb47e4cee85351b21deb908e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/LavaWell.png"
-dest_files=["res://.godot/imported/LavaWell.png-8ae76d34e615ef878a2b605927e1ab0b.ctex"]
+source_file="res://Art WIP/PhysicsOBJECTS/SteamS.png"
+dest_files=["res://.godot/imported/SteamS.png-f4e9887cfb47e4cee85351b21deb908e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y2la5a8py4h4"
-path="res://.godot/imported/Lava.png-b096f8737bf0752f7d298fd8e0867d15.ctex"
+uid="uid://l4hq0mg7mncx"
+path="res://.godot/imported/1Counter sprite.png-6862cdbd0490d7a1344167113fe56212.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/Lava.png"
-dest_files=["res://.godot/imported/Lava.png-b096f8737bf0752f7d298fd8e0867d15.ctex"]
+source_file="res://Art WIP/Dummy assets/BG Elements/1Counter sprite.png"
+dest_files=["res://.godot/imported/1Counter sprite.png-6862cdbd0490d7a1344167113fe56212.ctex"]
 
 [params]
 

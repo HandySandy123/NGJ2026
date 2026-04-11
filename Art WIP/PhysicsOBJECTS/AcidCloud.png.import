@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bciqudcsi1qdm"
-path="res://.godot/imported/Water.png-69fcb5f157ded8c7ec5576b134eb63e5.ctex"
+uid="uid://cidcxewsb5xoy"
+path="res://.godot/imported/AcidCloud.png-6e37f8bdad706ae02b05123a5fd51292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/Water.png"
-dest_files=["res://.godot/imported/Water.png-69fcb5f157ded8c7ec5576b134eb63e5.ctex"]
+source_file="res://Art WIP/PhysicsOBJECTS/AcidCloud.png"
+dest_files=["res://.godot/imported/AcidCloud.png-6e37f8bdad706ae02b05123a5fd51292.ctex"]
 
 [params]
 

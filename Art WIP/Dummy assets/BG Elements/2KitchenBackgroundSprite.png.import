@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c22uw4mbqef84"
-path="res://.godot/imported/SteamS.png-9e4c462d2d381f03a30c151ee4f20e89.ctex"
+uid="uid://ffiojb4say38"
+path="res://.godot/imported/2KitchenBackgroundSprite.png-783a239604ea088222bb2520083ed8a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/Anims/SteamS.png"
-dest_files=["res://.godot/imported/SteamS.png-9e4c462d2d381f03a30c151ee4f20e89.ctex"]
+source_file="res://Art WIP/Dummy assets/BG Elements/2KitchenBackgroundSprite.png"
+dest_files=["res://.godot/imported/2KitchenBackgroundSprite.png-783a239604ea088222bb2520083ed8a7.ctex"]
 
 [params]
 
