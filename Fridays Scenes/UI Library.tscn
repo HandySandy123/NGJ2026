@@ -1,0 +1,373 @@
+[gd_scene format=3 uid="uid://d2j0mbqmdbri4"]
+
+[ext_resource type="Texture2D" uid="uid://q5asceshvieo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_normal.png" id="1_6u2d2"]
+[ext_resource type="Texture2D" uid="uid://c0b473holxhns" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_pressed.png" id="2_dvcdd"]
+[ext_resource type="Texture2D" uid="uid://d1vhyu5cki8x8" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_hover.png" id="3_u3mqv"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_dvcdd"]
+[ext_resource type="Texture2D" uid="uid://dak6dnv42fexb" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_normal.png" id="5_srpff"]
+[ext_resource type="Texture2D" uid="uid://ciqyq40q53m1j" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_pressed.png" id="6_ktxnj"]
+[ext_resource type="Texture2D" uid="uid://dpg1l1jfx67a2" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_hover.png" id="7_yesx4"]
+[ext_resource type="Texture2D" uid="uid://b1ju2vv1h3cvo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteNormal.png" id="8_6bvw2"]
+[ext_resource type="Texture2D" uid="uid://d1a01htu7qw6y" path="res://Art WIP/Dummy assets/BG Elements/Yellow frame.png" id="8_ktxnj"]
+[ext_resource type="Texture2D" uid="uid://tqg775c14fpk" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteClickes.png" id="9_ghhfw"]
+[ext_resource type="Texture2D" uid="uid://bi8vmuf3k3k1x" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteHover.png" id="10_8gi0e"]
+[ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="11_grgqg"]
+[ext_resource type="Texture2D" uid="uid://bd23t0ds6qqcq" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowClicked.png" id="12_hu82q"]
+[ext_resource type="Texture2D" uid="uid://durcam2okanph" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowHover.png" id="13_28kl8"]
+
+[sub_resource type="Theme" id="Theme_u3mqv"]
+
+[node name="Main" type="Control" unique_id=546253248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=213848647]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons Population" type="PanelContainer" parent="PanelContainer" unique_id=1244353439]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/Buttons Population" unique_id=1186089669]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = -19
+
+[node name="Long Buttons" type="VBoxContainer" parent="PanelContainer/Buttons Population/MarginContainer" unique_id=1531359676]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons" unique_id=636899647]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons/TextureButton" unique_id=1124478339]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8599987
+offset_right = 137.61644
+offset_bottom = 18.859999
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "frogs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons" unique_id=610597587]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons/TextureButton2" unique_id=1692832032]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "hot babes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons" unique_id=709393224]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons/TextureButton3" unique_id=1624456705]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "robots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons" unique_id=2110802333]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Population/MarginContainer/Long Buttons/TextureButton4" unique_id=479393378]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.85998535
+offset_right = 137.61642
+offset_bottom = 18.859985
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "thoughtful rock"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons Biome" type="PanelContainer" parent="PanelContainer" unique_id=1302418208]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/Buttons Biome" unique_id=219085663]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 10
+
+[node name="Fat button row" type="VBoxContainer" parent="PanelContainer/Buttons Biome/MarginContainer" unique_id=5581001]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 11
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row" unique_id=1015508344]
+layout_mode = 2
+texture_normal = ExtResource("5_srpff")
+texture_pressed = ExtResource("6_ktxnj")
+texture_hover = ExtResource("7_yesx4")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton" unique_id=1588422431]
+layout_mode = 0
+offset_left = 8.000019
+offset_top = 4.0000024
+offset_right = 101.999985
+offset_bottom = 43.000004
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "ice world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row" unique_id=1129663004]
+layout_mode = 2
+texture_normal = ExtResource("5_srpff")
+texture_pressed = ExtResource("6_ktxnj")
+texture_hover = ExtResource("7_yesx4")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton2" unique_id=1615127021]
+layout_mode = 0
+offset_left = 8.000019
+offset_top = 4.000004
+offset_right = 101.999985
+offset_bottom = 43.000004
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "rock world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row" unique_id=963055791]
+layout_mode = 2
+texture_normal = ExtResource("5_srpff")
+texture_pressed = ExtResource("6_ktxnj")
+texture_hover = ExtResource("7_yesx4")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton3" unique_id=904458307]
+layout_mode = 0
+offset_left = 7.000019
+offset_top = 4.0
+offset_right = 103.000015
+offset_bottom = 43.0
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "water world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row" unique_id=1731334128]
+layout_mode = 2
+texture_normal = ExtResource("5_srpff")
+texture_pressed = ExtResource("6_ktxnj")
+texture_hover = ExtResource("7_yesx4")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton4" unique_id=666167071]
+layout_mode = 0
+offset_left = 6.000019
+offset_top = 4.0
+offset_right = 104.000015
+offset_bottom = 43.0
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "rubber duck"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons Geo Features" type="PanelContainer" parent="PanelContainer" unique_id=1707049797]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/Buttons Geo Features" unique_id=1763816364]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 10
+
+[node name="Long Buttons" type="VBoxContainer" parent="PanelContainer/Buttons Geo Features/MarginContainer" unique_id=1365179892]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons" unique_id=1450458245]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons/TextureButton" unique_id=1273529002]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8599987
+offset_right = 137.61644
+offset_bottom = 18.859999
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "Mountains"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons" unique_id=343509524]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons/TextureButton2" unique_id=1949112316]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "Acid"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons" unique_id=1976448287]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons/TextureButton3" unique_id=2066303232]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "Lava"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons" unique_id=1482164941]
+layout_mode = 2
+texture_normal = ExtResource("1_6u2d2")
+texture_pressed = ExtResource("2_dvcdd")
+texture_hover = ExtResource("3_u3mqv")
+
+[node name="Label" type="Label" parent="PanelContainer/Buttons Geo Features/MarginContainer/Long Buttons/TextureButton4" unique_id=2088015676]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.85998535
+offset_right = 137.61642
+offset_bottom = 18.859985
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_dvcdd")
+text = "Water"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Orb + Arrow" type="PanelContainer" parent="PanelContainer" unique_id=449408837]
+self_modulate = Color(0, 0, 0, 0)
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Orb + Arrow" unique_id=2119867105]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 186
+
+[node name="Orb" type="TextureButton" parent="PanelContainer/Orb + Arrow/HBoxContainer" unique_id=98799163]
+layout_mode = 2
+texture_normal = ExtResource("8_6bvw2")
+texture_pressed = ExtResource("9_ghhfw")
+texture_hover = ExtResource("10_8gi0e")
+
+[node name="Arrow" type="TextureButton" parent="PanelContainer/Orb + Arrow/HBoxContainer" unique_id=597118821]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("11_grgqg")
+texture_pressed = ExtResource("12_hu82q")
+texture_hover = ExtResource("13_28kl8")
+
+[node name="Orb Alone" type="HBoxContainer" parent="PanelContainer" unique_id=1954518075]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 148
+
+[node name="Orb" type="TextureButton" parent="PanelContainer/Orb Alone" unique_id=731874023]
+layout_mode = 2
+texture_normal = ExtResource("8_6bvw2")
+texture_pressed = ExtResource("9_ghhfw")
+texture_hover = ExtResource("10_8gi0e")
+
+[node name="YellowFrame" type="Sprite2D" parent="." unique_id=675872689]
+position = Vector2(146.4983, 120)
+scale = Vector2(1, 1.005)
+texture = ExtResource("8_ktxnj")

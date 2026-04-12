@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bpg34qc1fdxq5"]
+
+[ext_resource type="Texture2D" uid="uid://d1a01htu7qw6y" path="res://Art WIP/Dummy assets/BG Elements/Yellow frame.png" id="1_p6m7h"]
+
+[node name="YellowFrame" type="Sprite2D" unique_id=269234448]
+scale = Vector2(1, 1.005)
+texture = ExtResource("1_p6m7h")

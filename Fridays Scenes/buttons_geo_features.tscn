@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://xnf33h7thtif"]
+
+[ext_resource type="Texture2D" uid="uid://q5asceshvieo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_normal.png" id="1_86f3w"]
+[ext_resource type="Texture2D" uid="uid://c0b473holxhns" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_pressed.png" id="2_b32sv"]
+[ext_resource type="Texture2D" uid="uid://d1vhyu5cki8x8" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_hover.png" id="3_urt1j"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_q6nt0"]
+
+[sub_resource type="Theme" id="Theme_u3mqv"]
+
+[node name="Buttons Geo Features" type="PanelContainer" unique_id=1813746125]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=982126797]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 10
+
+[node name="Long Buttons" type="VBoxContainer" parent="MarginContainer" unique_id=578919796]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=2065942006]
+layout_mode = 2
+texture_normal = ExtResource("1_86f3w")
+texture_pressed = ExtResource("2_b32sv")
+texture_hover = ExtResource("3_urt1j")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton" unique_id=442662744]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8599987
+offset_right = 137.61644
+offset_bottom = 18.859999
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_q6nt0")
+text = "Mountains"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=1789534705]
+layout_mode = 2
+texture_normal = ExtResource("1_86f3w")
+texture_pressed = ExtResource("2_b32sv")
+texture_hover = ExtResource("3_urt1j")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton2" unique_id=639349360]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_q6nt0")
+text = "Acid"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=314521710]
+layout_mode = 2
+texture_normal = ExtResource("1_86f3w")
+texture_pressed = ExtResource("2_b32sv")
+texture_hover = ExtResource("3_urt1j")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton3" unique_id=94716293]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_q6nt0")
+text = "Lava"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=171365535]
+layout_mode = 2
+texture_normal = ExtResource("1_86f3w")
+texture_pressed = ExtResource("2_b32sv")
+texture_hover = ExtResource("3_urt1j")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton4" unique_id=185404431]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.85998535
+offset_right = 137.61642
+offset_bottom = 18.859985
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_q6nt0")
+text = "Water"
+horizontal_alignment = 1
+vertical_alignment = 1

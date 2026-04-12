@@ -7,7 +7,7 @@ z_index = -2
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1415295891]
 repeat_size = Vector2(600, 240)
-autoscroll = Vector2(8, 0)
+autoscroll = Vector2(3, 0)
 repeat_times = 2
 ignore_camera_scroll = true
 

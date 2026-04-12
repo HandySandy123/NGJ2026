@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://deijis8ydnbh3"]
+
+[ext_resource type="Texture2D" uid="uid://bxqnssio00j8l" path="res://Art WIP/New assets/Small Elements/Shakers sprite3.png" id="1_fd2lg"]
+[ext_resource type="Texture2D" uid="uid://cmikjh5vwwdne" path="res://Art WIP/New assets/Small Elements/Shakers sprite4.png" id="2_7a3v6"]
+[ext_resource type="Texture2D" uid="uid://dx4xtuxei86kb" path="res://Art WIP/New assets/Small Elements/Shakers sprite2.png" id="3_rc3wc"]
+[ext_resource type="Texture2D" uid="uid://bnvydufpl1jh" path="res://Art WIP/New assets/Small Elements/Shakers sprite1.png" id="4_1t33i"]
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=1970223924]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 14
+
+[node name="Frogs" type="TextureRect" parent="." unique_id=1100708444]
+layout_mode = 2
+texture = ExtResource("1_fd2lg")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1172898412]
+layout_mode = 2
+texture = ExtResource("2_7a3v6")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=388024876]
+layout_mode = 2
+texture = ExtResource("3_rc3wc")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=674675447]
+layout_mode = 2
+texture = ExtResource("4_1t33i")
