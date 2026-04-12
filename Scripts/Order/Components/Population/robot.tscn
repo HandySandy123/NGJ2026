@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dux5xqlskm2fp"]
+
+[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Robot/Robot.cs" id="1_7ugkg"]
+[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Robot/RobotBody.cs" id="2_sor3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qxj8"]
+size = Vector2(0.5, 2.625)
+
+[node name="Robot" type="Node2D" unique_id=1365641097 node_paths=PackedStringArray("Body", "sprite")]
+z_index = 7
+script = ExtResource("1_7ugkg")
+robotColors = PackedColorArray(0.3372549, 0.34901962, 0.36078432, 1, 0.38431373, 0.40392157, 0.41960785, 1, 0.45882353, 0.47843137, 0.49411765, 1, 0.52156866, 0.5882353, 0.72156864, 1, 0.9490196, 0.9490196, 0.9490196, 1)
+Body = NodePath("CharacterBody2D")
+sprite = NodePath("CharacterBody2D/Sprite2D")
+hopForce = 2.0
+PopName = "Robot"
+SlimeDustScore = 1.0
+metadata/_edit_pinned_properties_ = [&"PopName"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1956102994]
+script = ExtResource("2_sor3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=691051355]
+scale = Vector2(3.2799985, 1)
+shape = SubResource("RectangleShape2D_2qxj8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1663108603]

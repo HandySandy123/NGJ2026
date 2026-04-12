@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dv4ertro2akvc"]
+
+[ext_resource type="Script" uid="uid://badwg7sbenndm" path="res://Scripts/Order/Components/Biome/IcePlanet.cs" id="1_yb47b"]
+[ext_resource type="Texture2D" uid="uid://dsv1t2kkeilkh" path="res://Art/stock-photo-texture-of-ice-surface-351313604-2753803237.jpg" id="2_4hcgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hcgo"]
+size = Vector2(21.578812, 20)
+
+[node name="Ice" type="Node2D" unique_id=963932696 node_paths=PackedStringArray("Sprite")]
+script = ExtResource("1_yb47b")
+Sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729157121]
+scale = Vector2(3.5733333, 1.7820513)
+texture = ExtResource("2_4hcgo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2056281161]
+position = Vector2(-76, -66)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1108547505]
+position = Vector2(77, -10)
+scale = Vector2(24.83918, 2.9844465)
+shape = SubResource("RectangleShape2D_4hcgo")
