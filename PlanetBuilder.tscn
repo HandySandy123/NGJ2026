@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dwnqhmkeojsqi"]
+[gd_scene format=3 uid="uid://dkdkwvrpbfla4"]
+
+[ext_resource type="Script" uid="uid://cynylrd70276j" path="res://PlanetBuilder.cs" id="1_2v1h4"]
 
 [node name="Node2D" type="Node2D" unique_id=1594548449]
+script = ExtResource("1_2v1h4")

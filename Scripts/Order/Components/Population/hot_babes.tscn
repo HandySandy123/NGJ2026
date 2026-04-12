@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btl7oy4h4agf6"]
 
-[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.cs" id="1_gxu5q"]
-[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabesBody.cs" id="2_j53rq"]
+[ext_resource type="Script" uid="uid://bmkvropts8bkc" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.cs" id="1_gxu5q"]
+[ext_resource type="Script" uid="uid://cp1esd86erf3o" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabesBody.cs" id="2_j53rq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n8xik"]
 radius = 1.4142135

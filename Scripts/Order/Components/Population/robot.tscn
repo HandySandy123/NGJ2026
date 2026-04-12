@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dux5xqlskm2fp"]
 
-[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Robot/Robot.cs" id="1_7ugkg"]
-[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Robot/RobotBody.cs" id="2_sor3m"]
+[ext_resource type="Script" uid="uid://clgmafmj8rp36" path="res://Scripts/Order/Components/Population/Robot/Robot.cs" id="1_7ugkg"]
+[ext_resource type="Script" uid="uid://bbv18uy8aylb2" path="res://Scripts/Order/Components/Population/Robot/RobotBody.cs" id="2_sor3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qxj8"]
 size = Vector2(0.5, 2.625)
