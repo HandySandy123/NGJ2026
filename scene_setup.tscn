@@ -2,12 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://background.tscn" id="1_nvfit"]
 [ext_resource type="PackedScene" uid="uid://degi2i6vjnsm4" path="res://ui_main.tscn" id="2_yissa"]
+[ext_resource type="Texture2D" uid="uid://l4hq0mg7mncx" path="res://Art WIP/Dummy assets/BG Elements/1Counter sprite.png" id="3_gxlid"]
+[ext_resource type="Texture2D" uid="uid://ffiojb4say38" path="res://Art WIP/Dummy assets/BG Elements/2KitchenBackgroundSprite.png" id="4_rh2ks"]
 
 [node name="SceneSetup" type="Node2D" unique_id=1737386579]
 
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_nvfit")]
 
 [node name="UI_main" parent="." unique_id=259228834 instance=ExtResource("2_yissa")]
-offset_right = 131.0
-offset_bottom = 216.0
-scale = Vector2(2.8386002, 1.0882161)
+offset_right = 418.84818
+offset_bottom = 262.2951
+
+[node name="StaticBGArt" type="Sprite2D" parent="." unique_id=2021804662]
+visible = false
+position = Vector2(130, 138)
+texture = ExtResource("3_gxlid")
+
+[node name="StaticBGArt2" type="Sprite2D" parent="." unique_id=1347313382]
+position = Vector2(159, 113)
+texture = ExtResource("4_rh2ks")

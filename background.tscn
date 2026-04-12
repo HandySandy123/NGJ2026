@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ba5wxg172bu5q" path="res://Art WIP/Dummy assets/Anims/BigBG.png" id="1_oabld"]
 
 [node name="Background" type="Node2D" unique_id=1711593448]
+z_index = -2
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1415295891]
 repeat_size = Vector2(600, 240)
