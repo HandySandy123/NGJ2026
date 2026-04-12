@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://btl7oy4h4agf6"]
+
+[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.cs" id="1_gxu5q"]
+[ext_resource type="Script" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabesBody.cs" id="2_j53rq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n8xik"]
+radius = 1.4142135
+
+[node name="HotBabes" type="Node2D" unique_id=1510726461 node_paths=PackedStringArray("sprite")]
+z_index = 7
+script = ExtResource("1_gxu5q")
+HotBabesTops = PackedColorArray(0.9529412, 0.9137255, 0.8627451, 1, 0.7529412, 0.52156866, 0.32156864, 1, 0.36862746, 0.1882353, 0.13725491, 1, 0.5372549, 0.34117648, 0.21568628, 1, 0.85490197, 0.7058824, 0.6156863, 1)
+HotBabesBottoms = PackedColorArray(0.8039216, 0.7058824, 0.85882354, 1, 1, 0.78431374, 0.8666667, 1, 1, 0.6862745, 0.8, 1, 0.7411765, 0.8784314, 0.99607843, 1, 0.63529414, 0.8235294, 1, 1)
+sprite = NodePath("CharacterBody2D/Sprite2D")
+hopForce = 50.0
+PopName = "Hot Babe"
+metadata/_edit_pinned_properties_ = [&"PopName"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=326547099]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_j53rq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=73667064]
+shape = SubResource("CircleShape2D_n8xik")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=299025723]
+position = Vector2(-1, 1)

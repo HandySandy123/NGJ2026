@@ -1,8 +1,27 @@
 [gd_scene format=3 uid="uid://cn3npj06hxjc0"]
 
 [ext_resource type="PackedScene" uid="uid://dv6k730aflfq1" path="res://Scripts/God/god.tscn" id="1_mncer"]
+[ext_resource type="PackedScene" uid="uid://dv4ertro2akvc" path="res://Scripts/Order/Components/Biome/Ice.tscn" id="2_wicfy"]
+[ext_resource type="PackedScene" uid="uid://cu2fat4qwoqpj" path="res://Scripts/PopulationBrush/population_brush.tscn" id="3_go42g"]
+[ext_resource type="PackedScene" uid="uid://bi5raiyhe0il1" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.tscn" id="4_go42g"]
+[ext_resource type="Script" uid="uid://s14vrhnorw8n" path="res://Scripts/GameManager.cs" id="5_tq6uv"]
+[ext_resource type="PackedScene" uid="uid://p5h81q42c210" path="res://Scripts/Order/Components/Population/Frog/Frog.tscn" id="6_12c36"]
 
 [node name="Node2D" type="Node2D" unique_id=1242962098]
 
 [node name="God" parent="." unique_id=864941537 instance=ExtResource("1_mncer")]
-position = Vector2(213, 161)
+visible = false
+position = Vector2(420, 232)
+scale = Vector2(2.214429, 2.214429)
+ordering = false
+
+[node name="Ice" parent="." unique_id=963932696 instance=ExtResource("2_wicfy")]
+position = Vector2(198, 271)
+
+[node name="PopulationBrush" parent="." unique_id=1367516449 instance=ExtResource("3_go42g")]
+position = Vector2(-166, 97)
+_activePopulation = ExtResource("4_go42g")
+
+[node name="GameManager" type="Node2D" parent="." unique_id=1728787584]
+script = ExtResource("5_tq6uv")
+_populations = Array[PackedScene]([ExtResource("6_12c36"), ExtResource("4_go42g")])

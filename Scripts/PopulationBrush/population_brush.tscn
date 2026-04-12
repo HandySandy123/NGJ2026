@@ -4,3 +4,9 @@
 
 [node name="PopulationBrush" type="Node2D" unique_id=1367516449]
 script = ExtResource("1_c45l0")
+
+[node name="Timer" type="Timer" parent="." unique_id=1251871943]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="onTimerTimeout"]
