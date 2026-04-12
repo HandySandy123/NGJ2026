@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bl1gl25mox5ij"]
+
+[ext_resource type="PackedScene" path="res://ui_main.tscn" id="1_s41d2"]
+
+[node name="Level" type="Node2D" unique_id=947998593]
+
+[node name="Control" type="Control" parent="." unique_id=403095577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 284.295
+offset_bottom = 44.61
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI_main" parent="Control" unique_id=259228834 instance=ExtResource("1_s41d2")]
+layout_mode = 1
+offset_right = 131.0
+offset_bottom = 216.0

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://degi2i6vjnsm4"]
+[gd_scene format=3 uid="uid://rydetud1olbo"]
 
 [ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="1_7e8md"]
 [ext_resource type="Script" uid="uid://b8jko54ews74i" path="res://UiMain.cs" id="1_e7ba4"]
@@ -18,7 +18,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtiv8"]
 
-[node name="UI_main" type="PanelContainer" unique_id=259228834]
+[node name="UI_main" type="PanelContainer" unique_id=259228834 node_paths=PackedStringArray("icePlanet", "waterPlanet", "RockPlanet", "duckPlanet", "frogButt", "hotBabesButt", "robButt", "ThoughtsRockButt")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,6 +28,14 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.955, 0.915)
 script = ExtResource("1_e7ba4")
+icePlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton")
+waterPlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton2")
+RockPlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton3")
+duckPlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton4")
+frogButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton")
+hotBabesButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton2")
+robButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton3")
+ThoughtsRockButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton4")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1246107332]
 layout_mode = 2
@@ -75,7 +83,6 @@ texture_pressed = ExtResource("3_6o1qn")
 texture_hover = ExtResource("4_7e8md")
 
 [node name="LongButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1965271256]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvtm74edsrj3f"
+path="res://.godot/imported/michaelwave sounds.wav-b8a1b7c6f060e7319f1ea1485f4a67b1.sample"
+
+[deps]
+
+source_file="res://michaelwave sounds.wav"
+dest_files=["res://.godot/imported/michaelwave sounds.wav-b8a1b7c6f060e7319f1ea1485f4a67b1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
