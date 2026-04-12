@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmjvp80fdkl1n"
-path="res://.godot/imported/1TakeOrder.png-71597eb671a1d266896feb497dcbc090.ctex"
+uid="uid://bph7igydsdb5w"
+path="res://.godot/imported/zeus icon.jpg-712adbe08f69e728f205636dcfaf738b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/1TakeOrder.png"
-dest_files=["res://.godot/imported/1TakeOrder.png-71597eb671a1d266896feb497dcbc090.ctex"]
+source_file="res://atlas mus + god/zeus icon.jpg"
+dest_files=["res://.godot/imported/zeus icon.jpg-712adbe08f69e728f205636dcfaf738b.ctex"]
 
 [params]
 

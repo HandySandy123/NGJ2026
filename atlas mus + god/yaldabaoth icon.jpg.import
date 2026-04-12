@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fe0ala58omy5"
-path="res://.godot/imported/yaldabaoth icon.jpg-148ce352f18e1f1fd1b017d5c278000d.ctex"
+path="res://.godot/imported/yaldabaoth icon.jpg-122ede457b5d4cca30d625a6c3fa3951.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://yaldabaoth icon.jpg"
-dest_files=["res://.godot/imported/yaldabaoth icon.jpg-148ce352f18e1f1fd1b017d5c278000d.ctex"]
+source_file="res://atlas mus + god/yaldabaoth icon.jpg"
+dest_files=["res://.godot/imported/yaldabaoth icon.jpg-122ede457b5d4cca30d625a6c3fa3951.ctex"]
 
 [params]
 

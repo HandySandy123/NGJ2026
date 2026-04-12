@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bph7igydsdb5w"
-path="res://.godot/imported/zeus icon.jpg-9186a2041a5f8270605456e51ae0d9b3.ctex"
+uid="uid://bb8rlkm8undi"
+path="res://.godot/imported/marduk icon.PNG-2f8d6ecb4b2ac41d5caf87c37c6efa04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://zeus icon.jpg"
-dest_files=["res://.godot/imported/zeus icon.jpg-9186a2041a5f8270605456e51ae0d9b3.ctex"]
+source_file="res://atlas mus + god/marduk icon.PNG"
+dest_files=["res://.godot/imported/marduk icon.PNG-2f8d6ecb4b2ac41d5caf87c37c6efa04.ctex"]
 
 [params]
 

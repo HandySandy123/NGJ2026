@@ -3,15 +3,24 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjx355adkerge"
+<<<<<<<< HEAD:Scripts/God/marduk/marduk icon.PNG.import
 path="res://.godot/imported/marduk icon.PNG-cce60e83886324c90819c86a32d74013.ctex"
+========
+path="res://.godot/imported/marduk icon.PNG-2f8d6ecb4b2ac41d5caf87c37c6efa04.ctex"
+>>>>>>>> FridayNewBranch:atlas mus + god/marduk icon.PNG.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:Scripts/God/marduk/marduk icon.PNG.import
 source_file="res://Scripts/God/marduk/marduk icon.PNG"
 dest_files=["res://.godot/imported/marduk icon.PNG-cce60e83886324c90819c86a32d74013.ctex"]
+========
+source_file="res://atlas mus + god/marduk icon.PNG"
+dest_files=["res://.godot/imported/marduk icon.PNG-2f8d6ecb4b2ac41d5caf87c37c6efa04.ctex"]
+>>>>>>>> FridayNewBranch:atlas mus + god/marduk icon.PNG.import
 
 [params]
 
