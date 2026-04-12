@@ -15,7 +15,19 @@ public sealed partial class GameManager : Node2D
     public Random Random;
     [Export] Node2D[] worlds;
     [Export] PackedScene[] Scenes;
+    Node2D _activeScene;
+    string[] SceneNames;
 
+    public enum SceneInd
+    {
+        TakeOrder,
+        ChooseWorld,
+        Population,
+        PhysicsObject,
+        CookWorld,
+        Review
+    }
+    
     public override void _EnterTree()
     {
         Instance = this;
@@ -23,6 +35,11 @@ public sealed partial class GameManager : Node2D
         AddChild(_populationManager);
         Random =  new Random();
         makeWorldsInvisible();
+        SceneNames = new string[Scenes.Length];
+        for (int i = 0; i < Scenes.Length; i++)
+        {
+            SceneNames[i] = Scenes[i].ResourceName;
+        }
     }
 
     private void makeWorldsInvisible()
@@ -31,6 +48,24 @@ public sealed partial class GameManager : Node2D
         {
             world.Visible = false;
         }
+    }
+
+    public void setScene(int inx, bool delete = true, bool keepRunning = false)
+    {
+        if (delete)
+        {
+            _activeScene.QueueFree();
+        } else if (keepRunning)
+        {
+            _activeScene.Visible = false;
+        }
+        else
+        {
+            RemoveChild(_activeScene);
+        }
+        var newScene = GD.Load<PackedScene>(SceneNames[inx]).Instantiate();
+        AddChild(newScene);
+        _activeScene = (Node2D)newScene;
     }
 
     public void showWorld(int worldIndex)

@@ -28,16 +28,6 @@ public partial class UiMain : PanelContainer
 		GameManager.Instance.showWorld(2);
 	}
 	
-	
-
-	public void nextMenu()
-	{
-		WorldContainer.Visible = false;
-		PopulationContainer.Visible = true;
-	}
-
-	
-
 	public void frogs()
 	{
 		GD.Print("Finding frogs");

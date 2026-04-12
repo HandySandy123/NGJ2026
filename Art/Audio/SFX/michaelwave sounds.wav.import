@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bvtm74edsrj3f"
-path="res://.godot/imported/michaelwave sounds.wav-b8a1b7c6f060e7319f1ea1485f4a67b1.sample"
+path="res://.godot/imported/michaelwave sounds.wav-480a325526126a7a29fb9f2fc6a3b7d3.sample"
 
 [deps]
 
-source_file="res://michaelwave sounds.wav"
-dest_files=["res://.godot/imported/michaelwave sounds.wav-b8a1b7c6f060e7319f1ea1485f4a67b1.sample"]
+source_file="res://Art/Audio/SFX/michaelwave sounds.wav"
+dest_files=["res://.godot/imported/michaelwave sounds.wav-480a325526126a7a29fb9f2fc6a3b7d3.sample"]
 
 [params]
 

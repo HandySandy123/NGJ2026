@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ssnxd77mlsnx"
-path="res://.godot/imported/ptah icon.png-a1636705f074e7db8f330ca34103889b.ctex"
+uid="uid://bph7igydsdb5w"
+path="res://.godot/imported/zeus icon.jpg-dd6272da5af72b36883e8c0a4e9d68eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ptah icon.png"
-dest_files=["res://.godot/imported/ptah icon.png-a1636705f074e7db8f330ca34103889b.ctex"]
+source_file="res://Scripts/God/Zeus/zeus icon.jpg"
+dest_files=["res://.godot/imported/zeus icon.jpg-dd6272da5af72b36883e8c0a4e9d68eb.ctex"]
 
 [params]
 
