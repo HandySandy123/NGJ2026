@@ -1,7 +1,6 @@
 using Godot;
 
-
-namespace NGJ2026.Scripts.Order.Components.Population;
+namespace NGJ2026.Scripts.Order.Components.Population.Frog;
 
 public partial class Frogs : Population
 {
@@ -20,9 +19,8 @@ public partial class Frogs : Population
 
     public override void _Ready()
     {
-        PopName = "Frogs";
         timer.WaitTime = hopTime;
-
+        //GD.Print("Frog added");
     }
 
     protected override void CreateTexture(Color color, int X, int Y)
@@ -34,7 +32,7 @@ public partial class Frogs : Population
 
     public override void _Process(double delta)
     {
-        if (!(timer.TimeLeft < 0))
+        if (!(timer.TimeLeft <= 0))
         {
             Hop();
             timer.Start(hopTime);
@@ -68,7 +66,7 @@ public partial class Frogs : Population
         //GD.Print(vector);
         if(Body != null)
         {
-            GD.Print("hopping");
+            //GD.Print("hopping");
             Body.velocity += vector;
         }
     }

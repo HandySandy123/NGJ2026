@@ -4,38 +4,41 @@ using NGJ2026.Scripts.Order.Components.Population;
 
 public partial class PopulationManager : Node
 {
-	[Export] private PackedScene[] _populations;
+	private PackedScene[] _populations;
 
 	public PopulationManager(PackedScene[] populations)
 	{
-		_populations = populations;
-		foreach (var population in populations) GD.Print(population.GetPath());
+		_populations = new PackedScene[populations.Length];
+		for (int i = 0; i < _populations.Length; i++)
+		{
+			var p = GD.Load<PackedScene>(populations[i].GetPath());
+			var instP = p.Instantiate();
+			if (instP is Population pop)
+			{
+				_populations[i] = p;
+			}
+		}
+
+		foreach (var p in _populations)
+		{
+			var pop = p.Instantiate();
+			GD.Print(pop.Name + " added");
+		}
 	}
 
 	public Population getPopulation(string name)
 	{
 		for (int i = 0; i < _populations.Length; i++)
 		{
-			PackedScene pop = GD.Load<PackedScene>(_populations[i].GetPath());
-			if (pop.CanInstantiate())
+			var pop = _populations[i].Instantiate();
+			AddChild(pop);
+			if (pop is Population popu)
 			{
-				var population = pop.Instantiate();
-				if(population.GetType() == typeof(Population))
-				{
-					var popu = population as Population;
-					if(popu != null && popu.PopName.Equals(name))
-					{
-						return popu;
-					}
-				}
-
-				if (population.Name == name) return (Population)population;
-				else
-				{
-					population.QueueFree();
+				if(popu.PopName == name) {
+					GD.Print(popu.PopName + " added to population");
+					return popu;
 				}
 			}
-			pop.Free();
 		}
 		return null;
 	}

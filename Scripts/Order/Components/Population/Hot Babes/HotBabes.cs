@@ -1,15 +1,18 @@
-using Godot;
 using System;
-using NGJ2026.Scripts;
-using NGJ2026.Scripts.Order.Components.Population;
+using Godot;
+
+namespace NGJ2026.Scripts.Order.Components.Population.Hot_Babes;
 
 public partial class HotBabes : Population
 {
 	[Export] private Color[] HotBabesTops;
 	[Export] private Color[] HotBabesBottoms;
+
+	private Image img;
 	// Called when the node enters the scene tree for the first time.
 	public override void Spawn(int X, int Y)
 	{
+		img = Image.CreateEmpty(1, 2, false, Image.Format.Rgb8);
 		var ColA = GameManager.Instance.Random.Next(HotBabesTops.Length);
 		var ColB = GameManager.Instance.Random.Next(HotBabesBottoms.Length);
 		CreateTexture(HotBabesTops[ColA], 0, 0);
@@ -24,13 +27,11 @@ public partial class HotBabes : Population
 
 	public override void _EnterTree()
 	{
-		PopName = "Hot Babes";
-		
+		//GD.Print("Hot babe added");
 	}
 
 	protected override void CreateTexture(Color color, int X, int Y)
 	{
-		var img = Image.CreateEmpty(1, 2, false, Image.Format.Rgb8);
 		img.SetPixel(X, Y, color);
 		sprite.Texture = ImageTexture.CreateFromImage(img);
 	}

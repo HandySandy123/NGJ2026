@@ -18,7 +18,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtiv8"]
 
-[node name="UI_main" type="PanelContainer" unique_id=259228834 node_paths=PackedStringArray("icePlanet", "waterPlanet", "RockPlanet", "duckPlanet", "frogButt", "hotBabesButt", "robButt", "ThoughtsRockButt")]
+[node name="UI_main" type="PanelContainer" unique_id=259228834]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,16 +28,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.955, 0.915)
 script = ExtResource("1_e7ba4")
-icePlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton")
-waterPlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton2")
-RockPlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton3")
-duckPlanet = NodePath("MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton4")
-frogButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton")
-hotBabesButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton2")
-robButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton3")
-ThoughtsRockButt = NodePath("MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton4")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1246107332]
+z_index = -4
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
@@ -45,6 +38,7 @@ theme_override_constants/margin_right = -7
 theme_override_constants/margin_bottom = 13
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=806834349]
+z_index = 4
 layout_mode = 2
 theme_override_constants/separation = -26
 
@@ -83,6 +77,7 @@ texture_pressed = ExtResource("3_6o1qn")
 texture_hover = ExtResource("4_7e8md")
 
 [node name="LongButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1965271256]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")
@@ -264,3 +259,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Planet Creation/Orb + Arrow Container/ForwardButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton" to="." method="frogs"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton2" to="." method="hotBabes"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton3" to="." method="Robots"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton4" to="." method="thoughtfulRock"]
