@@ -30,6 +30,7 @@ scale = Vector2(0.955, 0.915)
 script = ExtResource("1_e7ba4")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1246107332]
+self_modulate = Color(1, 1, 1, 0)
 z_index = -4
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -38,11 +39,13 @@ theme_override_constants/margin_right = -7
 theme_override_constants/margin_bottom = 13
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=806834349]
+self_modulate = Color(1, 1, 1, 0)
 z_index = 4
 layout_mode = 2
 theme_override_constants/separation = -26
 
 [node name="Planet Creation" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=841826448]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.15
@@ -56,6 +59,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Orb + Arrow Container" type="PanelContainer" parent="MarginContainer/HBoxContainer/Planet Creation" unique_id=1995866098]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 8
 
@@ -77,6 +81,7 @@ texture_pressed = ExtResource("3_6o1qn")
 texture_hover = ExtResource("4_7e8md")
 
 [node name="LongButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1965271256]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")
@@ -95,13 +100,13 @@ texture_hover = ExtResource("1_vwxsp")
 
 [node name="FrogsText" type="Label" parent="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton" unique_id=1752127486]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 1.0
-offset_right = 97.0
-offset_bottom = 12.0
+offset_left = 17.612549
+offset_top = -0.09289551
+offset_right = 110.61255
+offset_bottom = 17.907104
+scale = Vector2(0.7, 0.7)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 8
 text = "Frogs"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -115,13 +120,13 @@ texture_hover = ExtResource("1_vwxsp")
 
 [node name="HotBabesText" type="Label" parent="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton2" unique_id=663182095]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 1.0
-offset_right = 97.0
-offset_bottom = 12.0
+offset_left = 16.56543
+offset_top = -0.09289551
+offset_right = 109.56543
+offset_bottom = 17.907104
+scale = Vector2(0.7, 0.7)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 8
 text = "Hot Babes"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -135,13 +140,13 @@ texture_hover = ExtResource("1_vwxsp")
 
 [node name="RobotsText" type="Label" parent="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton3" unique_id=411759636]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 1.0
-offset_right = 97.0
-offset_bottom = 12.0
+offset_left = 17.612549
+offset_top = -0.09289551
+offset_right = 110.61255
+offset_bottom = 17.907104
+scale = Vector2(0.7, 0.7)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 8
 text = "Robots"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -155,24 +160,26 @@ texture_hover = ExtResource("1_vwxsp")
 
 [node name="ThoughtfulRockText" type="Label" parent="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton4" unique_id=811525155]
 layout_mode = 0
-offset_left = 4.0
+offset_left = 0.8586426
 offset_top = 1.0
-offset_right = 97.0
-offset_bottom = 12.0
+offset_right = 134.85864
+offset_bottom = 19.0
+scale = Vector2(0.7, 0.7)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 8
 text = "Thoughtful Rock"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FatButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1203491574]
 visible = false
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/FatButtonMenu" unique_id=1529965454]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -187,13 +194,13 @@ texture_hover = ExtResource("12_e7ba4")
 
 [node name="IceWorldText" type="Label" parent="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton" unique_id=799934574]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 97.0
-offset_bottom = 40.0
+offset_left = 8.188477
+offset_top = 5.185791
+offset_right = 101.18848
+offset_bottom = 42.18579
+scale = Vector2(0.9, 0.9)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 14
 text = "Ice World"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -207,13 +214,13 @@ texture_hover = ExtResource("12_e7ba4")
 
 [node name="WaterWorldText" type="Label" parent="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton2" unique_id=1044920065]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 97.0
-offset_bottom = 40.0
+offset_left = 8.188477
+offset_top = 5.185791
+offset_right = 104.18848
+offset_bottom = 42.18579
+scale = Vector2(0.9, 0.9)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 14
 text = "Water World"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -227,13 +234,13 @@ texture_hover = ExtResource("12_e7ba4")
 
 [node name="RockWorldText" type="Label" parent="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton3" unique_id=11314536]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 97.0
-offset_bottom = 40.0
+offset_left = 8.188477
+offset_top = 5.185791
+offset_right = 101.18848
+offset_bottom = 42.18579
+scale = Vector2(0.9, 0.9)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 14
 text = "Rock World"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -247,13 +254,13 @@ texture_hover = ExtResource("12_e7ba4")
 
 [node name="RockWorldText" type="Label" parent="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton4" unique_id=655374806]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 3.0
-offset_right = 97.0
-offset_bottom = 40.0
+offset_left = 8.188477
+offset_top = 5.185791
+offset_right = 101.18848
+offset_bottom = 42.18579
+scale = Vector2(0.9, 0.9)
 theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/font = ExtResource("13_e7ba4")
-theme_override_font_sizes/font_size = 14
 text = "Duck World"
 horizontal_alignment = 1
 vertical_alignment = 1
