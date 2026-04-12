@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://rydetud1olbo"]
+[gd_scene format=3 uid="uid://degi2i6vjnsm4"]
 
 [ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="1_7e8md"]
 [ext_resource type="Script" uid="uid://b8jko54ews74i" path="res://UiMain.cs" id="1_e7ba4"]
@@ -18,7 +18,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtiv8"]
 
-[node name="UI_main" type="PanelContainer" unique_id=259228834]
+[node name="UI_main" type="PanelContainer" unique_id=259228834 node_paths=PackedStringArray("PopulationContainer", "WorldContainer")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,6 +28,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.955, 0.915)
 script = ExtResource("1_e7ba4")
+PopulationContainer = NodePath("MarginContainer/HBoxContainer/LongButtonMenu")
+WorldContainer = NodePath("MarginContainer/HBoxContainer/FatButtonMenu")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1246107332]
 z_index = -4
@@ -258,8 +260,12 @@ text = "Duck World"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Planet Creation/Orb + Arrow Container/ForwardButton" to="." method="ButtonPressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Planet Creation/Orb + Arrow Container/ForwardButton" to="." method="nextMenu"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton" to="." method="frogs"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton2" to="." method="hotBabes"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton3" to="." method="Robots"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/LongButtonMenu/VBoxContainer/TextureButton4" to="." method="thoughtfulRock"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton" to="." method="iceWorld"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton2" to="." method="waterWorld"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton3" to="." method="rockWorld"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/FatButtonMenu/VBoxContainer/TextureButton4" to="." method="duckWorld"]

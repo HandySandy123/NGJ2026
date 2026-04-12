@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://mb35prbbhexd"]
+
+[ext_resource type="Texture2D" uid="uid://kutr0hdppyo8" path="res://Art WIP/PhysicsOBJECTS/Planet/Rubber duck planet.png" id="1_511sq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hcgo"]
+size = Vector2(3.5705032, 10.335071)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4150"]
+
+[node name="Duck" type="Node2D" unique_id=963932696]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729157121]
+texture = ExtResource("1_511sq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2056281161]
+scale = Vector2(1.6462135, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1108547505]
+scale = Vector2(24.83918, 2.9844465)
+shape = SubResource("RectangleShape2D_4hcgo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1238544748]
+position = Vector2(-43.129276, 1)
+scale = Vector2(1, 1.3999995)
+shape = SubResource("CircleShape2D_y4150")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1785509624]
+position = Vector2(42.521824, -0.9999999)
+rotation = 2.8515196
+scale = Vector2(1, 1.3999995)
+shape = SubResource("CircleShape2D_y4150")
