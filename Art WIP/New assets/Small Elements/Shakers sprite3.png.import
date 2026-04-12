@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmjvp80fdkl1n"
-path="res://.godot/imported/1TakeOrder.png-71597eb671a1d266896feb497dcbc090.ctex"
+uid="uid://bxqnssio00j8l"
+path="res://.godot/imported/Shakers sprite3.png-b011f30d256c1ed46f3561e3b47a51dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/1TakeOrder.png"
-dest_files=["res://.godot/imported/1TakeOrder.png-71597eb671a1d266896feb497dcbc090.ctex"]
+source_file="res://Art WIP/New assets/Small Elements/Shakers sprite3.png"
+dest_files=["res://.godot/imported/Shakers sprite3.png-b011f30d256c1ed46f3561e3b47a51dd.ctex"]
 
 [params]
 

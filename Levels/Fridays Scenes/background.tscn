@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bha71de5yb72b"]
+
+[ext_resource type="Texture2D" uid="uid://ba5wxg172bu5q" path="res://Art WIP/Dummy assets/Anims/BigBG.png" id="1_oabld"]
+
+[node name="Background" type="Node2D" unique_id=1711593448]
+z_index = -2
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1415295891]
+repeat_size = Vector2(600, 240)
+autoscroll = Vector2(3, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="BigBg" type="Sprite2D" parent="Parallax2D" unique_id=822250631]
+texture_filter = 1
+position = Vector2(224, 120)
+texture = ExtResource("1_oabld")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://n8iex628heuj"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Levels/Fridays Scenes/background.tscn" id="1_ne7bb"]
+[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Levels/Fridays Scenes/buttons_orb_+_arrow.tscn" id="2_ah7ta"]
+
+[node name="1TakeOrder" type="Node2D" unique_id=1911094532]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_ne7bb")]
+position = Vector2(667, 206)
+
+[node name="Control" type="Control" parent="." unique_id=30882044]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Buttons Orb + Arrow" parent="Control" unique_id=226686799 instance=ExtResource("2_ah7ta")]
+layout_mode = 0

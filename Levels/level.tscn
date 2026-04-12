@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbu2eq6c8ktdy"]
 
 [ext_resource type="PackedScene" uid="uid://cu2fat4qwoqpj" path="res://Scripts/PopulationBrush/population_brush.tscn" id="2_gtnvv"]
-[ext_resource type="PackedScene" uid="uid://cvekid3uxyrwh" path="res://game_manager.tscn" id="3_wav5q"]
+[ext_resource type="PackedScene" path="res://game_manager.tscn" id="3_wav5q"]
 [ext_resource type="PackedScene" uid="uid://mb35prbbhexd" path="res://Scripts/Order/Components/Biome/DuckWorld.tscn" id="4_8a2b0"]
 [ext_resource type="PackedScene" uid="uid://dl3xu5v87us3f" path="res://Scripts/Order/Components/Biome/Ice.tscn" id="5_ecu0b"]
 [ext_resource type="PackedScene" uid="uid://brprx8trkgdd3" path="res://Scripts/Order/Components/Biome/RockWorld.tscn" id="6_t2u7g"]
@@ -22,9 +22,8 @@ size_flags_vertical = 3
 
 [node name="PopulationBrush" parent="." unique_id=1367516449 instance=ExtResource("2_gtnvv")]
 
-[node name="GameManager" parent="." unique_id=1403278644 node_paths=PackedStringArray("_populationBrush", "worlds") instance=ExtResource("3_wav5q")]
+[node name="GameManager" parent="." unique_id=1403278644 node_paths=PackedStringArray("_populationBrush") instance=ExtResource("3_wav5q")]
 _populationBrush = NodePath("../PopulationBrush")
-worlds = [NodePath("../Worlds/Duck"), NodePath("../Worlds/Ice"), NodePath("../Worlds/Rock"), NodePath("../Worlds/Water")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1256575926]
 collision_layer = 2

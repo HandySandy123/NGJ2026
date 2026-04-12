@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmjvp80fdkl1n"
-path="res://.godot/imported/1TakeOrder.png-71597eb671a1d266896feb497dcbc090.ctex"
+uid="uid://bywv3p1bdajj7"
+path="res://.godot/imported/Title pixel.png-e3ac8fa0440aacd522c3034858d86df8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art WIP/Dummy assets/1TakeOrder.png"
-dest_files=["res://.godot/imported/1TakeOrder.png-71597eb671a1d266896feb497dcbc090.ctex"]
+source_file="res://Art WIP/Title pixel.png"
+dest_files=["res://.godot/imported/Title pixel.png-e3ac8fa0440aacd522c3034858d86df8.ctex"]
 
 [params]
 

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dvyk0jokcuqty"]
+
+[ext_resource type="PackedScene" uid="uid://cjyeavao66gei" path="res://Fridays Scenes/buttons_population.tscn" id="1_kd7s6"]
+[ext_resource type="PackedScene" uid="uid://tjh4iijtvfwu" path="res://Fridays Scenes/buttons_biome.tscn" id="2_3jjhc"]
+[ext_resource type="PackedScene" uid="uid://xnf33h7thtif" path="res://Fridays Scenes/buttons_geo_features.tscn" id="3_u8gyn"]
+[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/buttons_orb_+_arrow.tscn" id="4_74uv0"]
+[ext_resource type="PackedScene" uid="uid://dktxebfk4ql5h" path="res://Fridays Scenes/button_orb.tscn" id="5_msucr"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI decoration yellow_frame.tscn" id="6_kd7s6"]
+
+[node name="UI Refrence Container" type="PanelContainer" unique_id=864913165]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons Population" parent="." unique_id=569575255 instance=ExtResource("1_kd7s6")]
+layout_mode = 2
+
+[node name="Buttons Biome" parent="." unique_id=215432349 instance=ExtResource("2_3jjhc")]
+visible = false
+layout_mode = 2
+
+[node name="Buttons Geo Features" parent="." unique_id=1813746125 instance=ExtResource("3_u8gyn")]
+layout_mode = 2
+
+[node name="Buttons Orb + Arrow" parent="." unique_id=226686799 instance=ExtResource("4_74uv0")]
+visible = false
+layout_mode = 2
+
+[node name="Button Orb" parent="." unique_id=1235274145 instance=ExtResource("5_msucr")]
+visible = false
+layout_mode = 2
+
+[node name="YellowFrame" parent="." unique_id=269234448 instance=ExtResource("6_kd7s6")]
+position = Vector2(146.4983, 120)

@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://tjh4iijtvfwu"]
+
+[ext_resource type="Texture2D" uid="uid://dak6dnv42fexb" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_normal.png" id="1_ac552"]
+[ext_resource type="Texture2D" uid="uid://ciqyq40q53m1j" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_pressed.png" id="2_86yys"]
+[ext_resource type="Texture2D" uid="uid://dpg1l1jfx67a2" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_hover.png" id="3_6iarf"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_exogg"]
+
+[sub_resource type="Theme" id="Theme_u3mqv"]
+
+[node name="Buttons Biome" type="PanelContainer" unique_id=215432349]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2112857443]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 10
+
+[node name="Fat button row" type="VBoxContainer" parent="MarginContainer" unique_id=350961407]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 11
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/Fat button row" unique_id=1850869308]
+layout_mode = 2
+texture_normal = ExtResource("1_ac552")
+texture_pressed = ExtResource("2_86yys")
+texture_hover = ExtResource("3_6iarf")
+
+[node name="Label" type="Label" parent="MarginContainer/Fat button row/TextureButton" unique_id=1947667654]
+layout_mode = 0
+offset_left = 8.000019
+offset_top = 4.0000024
+offset_right = 101.999985
+offset_bottom = 43.000004
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_exogg")
+text = "ice world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/Fat button row" unique_id=613985650]
+layout_mode = 2
+texture_normal = ExtResource("1_ac552")
+texture_pressed = ExtResource("2_86yys")
+texture_hover = ExtResource("3_6iarf")
+
+[node name="Label" type="Label" parent="MarginContainer/Fat button row/TextureButton2" unique_id=401372491]
+layout_mode = 0
+offset_left = 8.000019
+offset_top = 4.000004
+offset_right = 101.999985
+offset_bottom = 43.000004
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_exogg")
+text = "rock world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/Fat button row" unique_id=1463324296]
+layout_mode = 2
+texture_normal = ExtResource("1_ac552")
+texture_pressed = ExtResource("2_86yys")
+texture_hover = ExtResource("3_6iarf")
+
+[node name="Label" type="Label" parent="MarginContainer/Fat button row/TextureButton3" unique_id=851508131]
+layout_mode = 0
+offset_left = 7.000019
+offset_top = 4.0
+offset_right = 103.000015
+offset_bottom = 43.0
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_exogg")
+text = "water world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/Fat button row" unique_id=313482030]
+layout_mode = 2
+texture_normal = ExtResource("1_ac552")
+texture_pressed = ExtResource("2_86yys")
+texture_hover = ExtResource("3_6iarf")
+
+[node name="Label" type="Label" parent="MarginContainer/Fat button row/TextureButton4" unique_id=863787809]
+layout_mode = 0
+offset_left = 6.000019
+offset_top = 4.0
+offset_right = 104.000015
+offset_bottom = 43.0
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_exogg")
+text = "rubber duck"
+horizontal_alignment = 1
+vertical_alignment = 1
