@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bph7igydsdb5w"
-path="res://.godot/imported/zeus icon.jpg-9186a2041a5f8270605456e51ae0d9b3.ctex"
+uid="uid://bbgieq83fxopn"
+path="res://.godot/imported/5CookWorld.png-c97ec726e83e84673d886bcda34d1405.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://zeus icon.jpg"
-dest_files=["res://.godot/imported/zeus icon.jpg-9186a2041a5f8270605456e51ae0d9b3.ctex"]
+source_file="res://Art WIP/Dummy assets/5CookWorld.png"
+dest_files=["res://.godot/imported/5CookWorld.png-c97ec726e83e84673d886bcda34d1405.ctex"]
 
 [params]
 

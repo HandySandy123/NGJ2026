@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://rydetud1olbo"]
+[gd_scene format=3 uid="uid://degi2i6vjnsm4"]
 
 [ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="1_7e8md"]
 [ext_resource type="Script" uid="uid://b8jko54ews74i" path="res://UiMain.cs" id="1_e7ba4"]
@@ -77,7 +77,6 @@ texture_pressed = ExtResource("3_6o1qn")
 texture_hover = ExtResource("4_7e8md")
 
 [node name="LongButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1965271256]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")
@@ -168,6 +167,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FatButtonMenu" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1203491574]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_styles/panel = SubResource("StyleBoxFlat_wtiv8")

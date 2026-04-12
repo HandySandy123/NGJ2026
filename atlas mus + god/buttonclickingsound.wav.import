@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b0dlxee4c81t4"
-path="res://.godot/imported/buttonclickingsound.wav-4af018d3f16c873ca28828b14f5814aa.sample"
+path="res://.godot/imported/buttonclickingsound.wav-1e6790367f0c73a1bccbb594eb6c8981.sample"
 
 [deps]
 
-source_file="res://buttonclickingsound.wav"
-dest_files=["res://.godot/imported/buttonclickingsound.wav-4af018d3f16c873ca28828b14f5814aa.sample"]
+source_file="res://atlas mus + god/buttonclickingsound.wav"
+dest_files=["res://.godot/imported/buttonclickingsound.wav-1e6790367f0c73a1bccbb594eb6c8981.sample"]
 
 [params]
 

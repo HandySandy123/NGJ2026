@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ssnxd77mlsnx"
-path="res://.godot/imported/ptah icon.png-a1636705f074e7db8f330ca34103889b.ctex"
+uid="uid://dfb0urf51p5wu"
+path="res://.godot/imported/6Review.png-529a3af31d69c5c251fa435c0d9fcf76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ptah icon.png"
-dest_files=["res://.godot/imported/ptah icon.png-a1636705f074e7db8f330ca34103889b.ctex"]
+source_file="res://Art WIP/Dummy assets/6Review.png"
+dest_files=["res://.godot/imported/6Review.png-529a3af31d69c5c251fa435c0d9fcf76.ctex"]
 
 [params]
 
