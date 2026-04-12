@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bc16klcud7f4c"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_laupd"]
+
+[node name="Start screen" type="Node2D" unique_id=1607559137]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_laupd")]

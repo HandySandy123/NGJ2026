@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djtg4nwtcaenv"]
 
-[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://background.tscn" id="1_tkelb"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_tkelb"]
 [ext_resource type="PackedScene" uid="uid://dqdoc7h8h03iq" path="res://Fridays Scenes/IconsGeoFeatures.tscn" id="3_vf8cb"]
 [ext_resource type="PackedScene" uid="uid://xnf33h7thtif" path="res://Fridays Scenes/buttons_geo_features.tscn" id="4_erm21"]
 
