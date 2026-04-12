@@ -3,7 +3,8 @@ using System;
 
 public partial class Order : Node2D
 {
-	[Export] private float SlimeDustRatio;
+	[Export] private float DustSlimeRatio;
+	[Export] private float FunnyScaryRatio;
 	[Export] private string[] order;
 
 	public string getLine(int index)
