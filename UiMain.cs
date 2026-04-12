@@ -8,6 +8,11 @@ public partial class UiMain : PanelContainer
 	[Export] Container PopulationContainer;
 	[Export] Container WorldContainer;
 	
+	public void duckWorld()
+	{
+		GameManager.Instance.showWorld(0);
+	}
+	
 	public void iceWorld()
 	{
 		GameManager.Instance.showWorld(1);
@@ -22,6 +27,8 @@ public partial class UiMain : PanelContainer
 	{
 		GameManager.Instance.showWorld(2);
 	}
+	
+	
 
 	public void nextMenu()
 	{
@@ -29,10 +36,7 @@ public partial class UiMain : PanelContainer
 		PopulationContainer.Visible = true;
 	}
 
-	public void duckWorld()
-	{
-		GameManager.Instance.showWorld(0);
-	}
+	
 
 	public void frogs()
 	{

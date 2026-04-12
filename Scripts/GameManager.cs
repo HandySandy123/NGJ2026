@@ -14,6 +14,7 @@ public sealed partial class GameManager : Node2D
     public Vector2 MousePosition;
     public Random Random;
     [Export] Node2D[] worlds;
+    [Export] PackedScene[] Scenes;
 
     public override void _EnterTree()
     {
