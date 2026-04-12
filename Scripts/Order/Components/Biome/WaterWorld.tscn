@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://dl3xu5v87us3f"]
+[gd_scene format=3 uid="uid://b3falrgx01khi"]
 
-[ext_resource type="Texture2D" uid="uid://dyh0ss1abb51n" path="res://Art WIP/PhysicsOBJECTS/Planet/Ice planet.png" id="2_4hcgo"]
+[ext_resource type="Texture2D" uid="uid://bvduh6ot6klr2" path="res://Art WIP/PhysicsOBJECTS/Planet/water planet.png" id="1_frx44"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hcgo"]
-size = Vector2(5.3068438, 7.03648)
+size = Vector2(5.3802104, 10.335071)
 
-[node name="Ice" type="Node2D" unique_id=963932696]
+[node name="Water" type="Node2D" unique_id=963932696]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729157121]
-texture = ExtResource("2_4hcgo")
+texture = ExtResource("1_frx44")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2056281161]
-position = Vector2(-76, 15)
+position = Vector2(-76, 11)
 scale = Vector2(1.6462135, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1108547505]
-position = Vector2(45.255367, -19.5)
+position = Vector2(46.16655, -11.000001)
 scale = Vector2(24.83918, 2.9844465)
 shape = SubResource("RectangleShape2D_4hcgo")

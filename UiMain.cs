@@ -5,24 +5,33 @@ namespace NGJ2026;
 
 public partial class UiMain : PanelContainer
 {
+	[Export] Container PopulationContainer;
+	[Export] Container WorldContainer;
+	
 	public void iceWorld()
 	{
-		
+		GameManager.Instance.showWorld(1);
 	}
 
 	public void waterWorld()
 	{
-		
+		GameManager.Instance.showWorld(3);
 	}
 
 	public void rockWorld()
 	{
-		
+		GameManager.Instance.showWorld(2);
+	}
+
+	public void nextMenu()
+	{
+		WorldContainer.Visible = false;
+		PopulationContainer.Visible = true;
 	}
 
 	public void duckWorld()
 	{
-		
+		GameManager.Instance.showWorld(0);
 	}
 
 	public void frogs()

@@ -13,6 +13,7 @@ public sealed partial class GameManager : Node2D
     [Export] PopulationBrush.PopulationBrush _populationBrush;
     public Vector2 MousePosition;
     public Random Random;
+    [Export] Node2D[] worlds;
 
     public override void _EnterTree()
     {
@@ -20,6 +21,21 @@ public sealed partial class GameManager : Node2D
         _populationManager = new PopulationManager(_populations);
         AddChild(_populationManager);
         Random =  new Random();
+        makeWorldsInvisible();
+    }
+
+    private void makeWorldsInvisible()
+    {
+        foreach (var world in worlds)
+        {
+            world.Visible = false;
+        }
+    }
+
+    public void showWorld(int worldIndex)
+    {
+        makeWorldsInvisible();
+        worlds[worldIndex].Visible = true;
     }
 
     public override void _Process(double delta)
