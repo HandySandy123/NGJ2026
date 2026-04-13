@@ -5,6 +5,7 @@ public partial class God : Node2D
 {
 	private int orderIndex = 0;
 	[Export]public bool ordering = false;
+	public Action<bool> doneOrdering;
 	[Export]Order order;
 	[Export]SpeechBubble speechBubble;
 
@@ -21,7 +22,11 @@ public partial class God : Node2D
 			}
 			orderIndex++;
 			speechBubble.setLabelText(line);
+		}
 
+		if (orderIndex >= order.GetOrderLength())
+		{
+			doneOrdering.Invoke(true);
 		}
 	}
 }
