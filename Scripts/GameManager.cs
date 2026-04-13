@@ -14,6 +14,8 @@ public sealed partial class GameManager : Node2D
     public Vector2 MousePosition;
     public Random Random;
     [Export] Node2D[] worlds;
+    [Export] private PackedScene[] Gods;
+    public God activeGod { get; set; }
 
     public override void _EnterTree()
     {
@@ -22,6 +24,16 @@ public sealed partial class GameManager : Node2D
         AddChild(_populationManager);
         Random =  new Random();
         makeWorldsInvisible();
+        chooseGod();
+    }
+
+    private void chooseGod()
+    {
+        var ind = Random.Next(Gods.Length);
+        GD.Print(ind);
+        var instance = Gods[ind].Instantiate();
+        GD.Print(instance.Name + " selected");
+        activeGod = (God)instance;
     }
 
     private void makeWorldsInvisible()

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b4dpw11lm16t8"]
+
+[ext_resource type="Script" uid="uid://ckadnb1ed3vft" path="res://Scripts/God/God.cs" id="1_0nl5u"]
+[ext_resource type="Texture2D" uid="uid://cmhnivgsfgki0" path="res://Scripts/God/marduk/Marduk.jpg" id="2_7j2c7"]
+[ext_resource type="Texture2D" uid="uid://cxpoma25hhh7d" path="res://Art/SRD_comic_clouds_4-3594411102.png" id="3_3oiyr"]
+[ext_resource type="Script" uid="uid://dxkobtk0n7mse" path="res://Scripts/God/SpeechBubble.cs" id="4_pqvy6"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="5_fr2ya"]
+[ext_resource type="Script" uid="uid://du2cm0i73406s" path="res://Scripts/God/Order.cs" id="5_s52ne"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yh5rp"]
+font = ExtResource("5_fr2ya")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+
+[node name="God" type="Node2D" unique_id=864941537 node_paths=PackedStringArray("order", "speechBubble")]
+script = ExtResource("1_0nl5u")
+ordering = true
+order = NodePath("Order")
+speechBubble = NodePath("SpeechBubble")
+
+[node name="GodIcon" type="Sprite2D" parent="." unique_id=1662321560]
+scale = Vector2(0.112778544, 0.112778544)
+texture = ExtResource("2_7j2c7")
+
+[node name="SpeechBubble" type="Sprite2D" parent="." unique_id=287420669 node_paths=PackedStringArray("label")]
+position = Vector2(-94, -71)
+texture = ExtResource("3_3oiyr")
+flip_h = true
+script = ExtResource("4_pqvy6")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="SpeechBubble" unique_id=1258549400]
+anchors_preset = -1
+anchor_left = 0.040000003
+anchor_top = 0.12100001
+anchor_right = 0.933
+anchor_bottom = 0.66700006
+offset_left = -75.0
+offset_top = -49.15
+offset_right = -74.95
+offset_bottom = -108.05001
+label_settings = SubResource("LabelSettings_yh5rp")
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="Order" type="Node2D" parent="." unique_id=801923724]
+script = ExtResource("5_s52ne")
+DustSlimeRatio = 0.7
+FunnyScaryRatio = 0.1
+order = PackedStringArray("it\'s ya boi marduk in the HOUSEEEEEEEEEEEEE.", " the most alpha creation god around.", "fresh from my dragon slaying livestream 😎", "need ya help turning my opp\'s scales and bones and whatnot into something nice and flavorful though.", "just don\'t tell my followers i hired you.", "skibidi gyatt six seven")

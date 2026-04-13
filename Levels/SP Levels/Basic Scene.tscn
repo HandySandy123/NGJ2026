@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://rtta5jc3nsa"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_stv8s"]
+
+[node name="TakeOrder" type="Node2D" unique_id=450680276]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_stv8s")]
+position = Vector2(227, 78)
+scale = Vector2(0.33882374, 0.33882374)

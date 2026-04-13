@@ -9,10 +9,10 @@
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_6ydbi")]
 
 [node name="StaticBGArt" type="Sprite2D" parent="." unique_id=2021804662]
-visible = false
 position = Vector2(130, 138)
 texture = ExtResource("2_loa40")
 
 [node name="StaticBGArt2" type="Sprite2D" parent="." unique_id=1347313382]
+visible = false
 position = Vector2(159, 113)
 texture = ExtResource("3_vcpa6")
