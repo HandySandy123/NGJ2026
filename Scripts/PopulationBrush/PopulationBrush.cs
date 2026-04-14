@@ -15,9 +15,10 @@ public partial class PopulationBrush : Node2D
     private Vector2 center;
     private Population _activePopulation;
     static readonly Random random = new Random();
-    public override void _Ready()
+
+    public override void _EnterTree()
     {
-        
+        GameManager.Instance._populationBrush = this;
     }
 
     public void setPopulation(Population population)
@@ -32,9 +33,9 @@ public partial class PopulationBrush : Node2D
         if (Input.IsActionPressed("OnClick") && _activePopulation != null)
         {
             //GD.Print("OnClick");
-            int angle = random.Next(360); 
-            var X = Mathf.FloorToInt(center.X + radius * Mathf.Cos(angle));
-            var Y = Mathf.FloorToInt(center.Y + radius * Mathf.Sin(angle));
+            // int angle = random.Next(360); 
+            // var X = Mathf.FloorToInt(center.X + radius * Mathf.Cos(angle));
+            // var Y = Mathf.FloorToInt(center.Y + radius * Mathf.Sin(angle));
             var node = (Population)_activePopulation.Duplicate();
             // switch (_activePopulation.PopName)
             // {
@@ -51,7 +52,7 @@ public partial class PopulationBrush : Node2D
             //
             AddSibling(node);
             GD.Print("Added " + node.PopName);
-            if (node != null) node.Spawn(X, Y);
+            node.Spawn(Mathf.CeilToInt(Position.X), Mathf.CeilToInt(Position.Y));
         }
     }
 

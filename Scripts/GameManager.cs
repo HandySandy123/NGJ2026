@@ -10,7 +10,7 @@ public sealed partial class GameManager : Node2D
     public static GameManager Instance { get; private set; }
     PopulationManager _populationManager;
     [Export]PackedScene[] _populations;
-    [Export] PopulationBrush.PopulationBrush _populationBrush;
+    [Export] public PopulationBrush.PopulationBrush _populationBrush;
     public Vector2 MousePosition;
     public Random Random;
     [Export] Node2D[] worlds;

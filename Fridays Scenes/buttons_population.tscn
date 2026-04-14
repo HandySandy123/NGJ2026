@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjyeavao66gei"]
 
 [ext_resource type="Texture2D" uid="uid://q5asceshvieo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_normal.png" id="1_r2ni6"]
+[ext_resource type="Script" path="res://UiMain.cs" id="1_rkbtj"]
 [ext_resource type="Texture2D" uid="uid://c0b473holxhns" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_pressed.png" id="2_rkbtj"]
 [ext_resource type="Texture2D" uid="uid://d1vhyu5cki8x8" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_hover.png" id="3_fkyw6"]
 [ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_p8ucg"]
@@ -11,6 +12,7 @@
 self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 size_flags_horizontal = 8
+script = ExtResource("1_rkbtj")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1054856462]
 self_modulate = Color(1, 1, 1, 0)
@@ -104,3 +106,8 @@ theme_override_fonts/font = ExtResource("4_p8ucg")
 text = "thoughtful rock"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/Long Buttons/TextureButton" to="." method="frogs"]
+[connection signal="pressed" from="MarginContainer/Long Buttons/TextureButton2" to="." method="hotBabes"]
+[connection signal="pressed" from="MarginContainer/Long Buttons/TextureButton3" to="." method="Robots"]
+[connection signal="pressed" from="MarginContainer/Long Buttons/TextureButton4" to="." method="thoughtfulRock"]
