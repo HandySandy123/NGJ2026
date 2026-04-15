@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://deijis8ydnbh3"]
+
+[ext_resource type="PackedScene" uid="uid://nrwc3yt5y3fa" path="res://Fridays Scenes/UI PIECES/IconsPopulation.tscn" id="1_vms32"]
+
+[node name="Node2D" type="Node2D" unique_id=1029251708]
+
+[node name="PanelContainer" parent="." unique_id=667554493 instance=ExtResource("1_vms32")]

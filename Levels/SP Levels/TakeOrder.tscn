@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dgvysib7age7c" path="res://Levels/SP Levels/TakeOrder.cs" id="1_n1pem"]
 [ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/buttons_orb_+_arrow.tscn" id="3_f048y"]
 [ext_resource type="Texture2D" uid="uid://l4hq0mg7mncx" path="res://Art WIP/Dummy assets/BG Elements/1Counter sprite.png" id="4_elu7m"]
+[ext_resource type="PackedScene" uid="uid://cjyeavao66gei" path="res://Fridays Scenes/buttons_population.tscn" id="5_f048y"]
 
 [node name="TakeOrder" type="Node2D" unique_id=450680276 node_paths=PackedStringArray("orbArrow", "godSpot")]
 script = ExtResource("1_n1pem")
@@ -26,3 +27,9 @@ texture = ExtResource("4_elu7m")
 
 [node name="GodSpot" type="Node2D" parent="." unique_id=586797857]
 position = Vector2(272, 104)
+
+[node name="Buttons Population" parent="." unique_id=569575255 instance=ExtResource("5_f048y")]
+offset_left = 268.0
+offset_top = 13.0
+offset_right = 381.0
+offset_bottom = 189.0

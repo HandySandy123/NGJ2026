@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://b2puq2onc53na"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_74oq1"]
+[ext_resource type="Texture2D" uid="uid://bywv3p1bdajj7" path="res://Art WIP/Title pixel.png" id="2_hgjuy"]
+[ext_resource type="Texture2D" uid="uid://cerqiu86ofr2w" path="res://Art WIP/Title2pixel.png" id="3_ycc88"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_m454g"]
+[ext_resource type="Texture2D" uid="uid://dak6dnv42fexb" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_normal.png" id="5_pqfie"]
+[ext_resource type="Texture2D" uid="uid://ciqyq40q53m1j" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_pressed.png" id="6_vxcvw"]
+[ext_resource type="Texture2D" uid="uid://dpg1l1jfx67a2" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_hover.png" id="7_3ekk1"]
+
+[sub_resource type="Animation" id="Animation_m454g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(197, 88)]
+}
+
+[sub_resource type="Animation" id="Animation_pqfie"]
+resource_name = "Universaria Logo Anim"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10, 12.892883, 16.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(193, 90), Vector2(200, 80), Vector2(214, 88), Vector2(202.3068, 91.0184), Vector2(193, 90)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vxcvw"]
+_data = {
+&"RESET": SubResource("Animation_m454g"),
+&"Universaria Logo Anim": SubResource("Animation_pqfie")
+}
+
+[sub_resource type="Animation" id="Animation_3ekk1"]
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(199, 87)]
+}
+
+[sub_resource type="Animation" id="Animation_vxcvw"]
+resource_name = "Universaria logo anim 2"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.1631804, 9.556163, 14.148826, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(199, 87), Vector2(202, 88), Vector2(203, 90), Vector2(202, 91), Vector2(199, 87)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ekk1"]
+_data = {
+&"RESET": SubResource("Animation_3ekk1"),
+&"Universaria logo anim 2": SubResource("Animation_vxcvw")
+}
+
+[node name="Node2D" type="Node2D" unique_id=2105927121]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_74oq1")]
+
+[node name="Universaria" type="Sprite2D" parent="." unique_id=1662059442]
+position = Vector2(197, 88)
+texture = ExtResource("2_hgjuy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Universaria" unique_id=1347418615]
+libraries/ = SubResource("AnimationLibrary_vxcvw")
+
+[node name="UniversariaLogo2" type="Sprite2D" parent="." unique_id=368463531]
+position = Vector2(199, 87)
+texture = ExtResource("3_ycc88")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UniversariaLogo2" unique_id=446777642]
+libraries/ = SubResource("AnimationLibrary_3ekk1")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1066890978]
+offset_left = 148.0
+offset_top = 133.0
+offset_right = 248.0
+offset_bottom = 176.0
+texture_normal = ExtResource("5_pqfie")
+texture_pressed = ExtResource("6_vxcvw")
+texture_hover = ExtResource("7_3ekk1")
+
+[node name="Label" type="Label" parent="TextureButton" unique_id=1023677956]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 98.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("4_m454g")
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1644366175]
+offset_left = 106.99999
+offset_top = 104.0
+offset_right = 375.0
+offset_bottom = 127.0
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("4_m454g")
+text = "By my Dad who works at nintendo"
+metadata/_edit_use_anchors_ = true

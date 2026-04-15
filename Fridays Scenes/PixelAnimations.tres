@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://6ugrpdp74gpl"]
+
+[ext_resource type="Texture2D" uid="uid://b2gm0olnaf8c1" path="res://Art WIP/Dummy assets/Anims/microwave universe animated1.png" id="1_imb40"]
+[ext_resource type="Texture2D" uid="uid://w0s65lifu5lu" path="res://Art WIP/New assets/Small Elements/Bell sprite animation1.png" id="1_wxs5e"]
+[ext_resource type="Texture2D" uid="uid://du4ft0imbib0j" path="res://Art WIP/Dummy assets/Anims/microwave universe animated2.png" id="2_5roy5"]
+[ext_resource type="Texture2D" uid="uid://dn8geij1p8c8f" path="res://Art WIP/New assets/Small Elements/Bell sprite animation2.png" id="2_idc3h"]
+[ext_resource type="Texture2D" uid="uid://c0mlqollwtfsl" path="res://Art WIP/New assets/Small Elements/Bell sprite animation3.png" id="3_1e0wl"]
+[ext_resource type="Texture2D" uid="uid://bf3moaos25mk3" path="res://Art WIP/Dummy assets/Anims/microwave universe animated3.png" id="3_rump8"]
+[ext_resource type="Texture2D" uid="uid://d3qtgg7gty50o" path="res://Art WIP/New assets/Small Elements/Bell sprite animation4.png" id="4_gidcp"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wxs5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_idc3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1e0wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gidcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wxs5e")
+}],
+"loop": false,
+"name": &"Bell Riniging",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_imb40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5roy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rump8")
+}],
+"loop": true,
+"name": &"Universe Spinning",
+"speed": 2.0
+}]

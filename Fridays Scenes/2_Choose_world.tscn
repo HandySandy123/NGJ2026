@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://e1fttcfo8854"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_rsgd4"]
+[ext_resource type="Texture2D" uid="uid://ffiojb4say38" path="res://Art WIP/Dummy assets/BG Elements/2KitchenBackgroundSprite.png" id="2_itfjt"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI PIECES/UI decoration yellow_frame.tscn" id="3_2lk6l"]
+[ext_resource type="PackedScene" uid="uid://tjh4iijtvfwu" path="res://Fridays Scenes/UI PIECES/buttons_biome.tscn" id="4_pgoml"]
+[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/UI PIECES/buttons_orb_+_arrow.tscn" id="5_o36cr"]
+
+[node name="Node2D" type="Node2D" unique_id=1913545592]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_rsgd4")]
+
+[node name="2KitchenBackgroundSprite" type="Sprite2D" parent="." unique_id=1402174917]
+position = Vector2(165, 131)
+texture = ExtResource("2_itfjt")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=66569337]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 240)
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 400.0
+offset_bottom = 240.0
+grow_horizontal = 2
+
+[node name="YellowFrame" parent="PanelContainer" unique_id=269234448 instance=ExtResource("3_2lk6l")]
+position = Vector2(146, 119)
+
+[node name="Buttons Biome" parent="PanelContainer" unique_id=215432349 instance=ExtResource("4_pgoml")]
+layout_mode = 2
+
+[node name="Buttons Orb + Arrow" parent="PanelContainer" unique_id=226686799 instance=ExtResource("5_o36cr")]
+layout_mode = 2
