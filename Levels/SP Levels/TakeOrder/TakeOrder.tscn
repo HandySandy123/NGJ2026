@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b62uwkxic263u"]
 
 [ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_b3dop"]
-[ext_resource type="Script" uid="uid://dgvysib7age7c" path="res://Levels/SP Levels/TakeOrder.cs" id="1_n1pem"]
+[ext_resource type="Script" uid="uid://dgvysib7age7c" path="res://Levels/SP Levels/TakeOrder/TakeOrder.cs" id="1_n1pem"]
+[ext_resource type="PackedScene" uid="uid://b4dpw11lm16t8" path="res://Scripts/God/marduk/Marduk.tscn" id="2_f048y"]
 [ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/buttons_orb_+_arrow.tscn" id="3_f048y"]
 [ext_resource type="Texture2D" uid="uid://l4hq0mg7mncx" path="res://Art WIP/Dummy assets/BG Elements/1Counter sprite.png" id="4_elu7m"]
 [ext_resource type="PackedScene" uid="uid://cjyeavao66gei" path="res://Fridays Scenes/buttons_population.tscn" id="5_f048y"]
@@ -10,12 +11,14 @@
 script = ExtResource("1_n1pem")
 orbArrow = NodePath("Buttons Orb + Arrow")
 godSpot = NodePath("GodSpot")
+Gods = Array[PackedScene]([ExtResource("2_f048y")])
 
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_b3dop")]
 position = Vector2(227, 78)
 scale = Vector2(0.33882374, 0.33882374)
 
 [node name="Buttons Orb + Arrow" parent="." unique_id=226686799 instance=ExtResource("3_f048y")]
+z_index = 2
 offset_left = 5.0
 offset_top = 191.0
 offset_right = 292.0

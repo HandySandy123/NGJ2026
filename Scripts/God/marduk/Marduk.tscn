@@ -13,7 +13,6 @@ font_size = 9
 font_color = Color(0, 0, 0, 1)
 
 [node name="God" type="Node2D" unique_id=864941537 node_paths=PackedStringArray("order", "speechBubble")]
-position = Vector2(213, 156)
 script = ExtResource("1_0nl5u")
 ordering = true
 order = NodePath("Order")
