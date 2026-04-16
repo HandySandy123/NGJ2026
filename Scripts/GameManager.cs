@@ -16,7 +16,7 @@ public sealed partial class GameManager : Node2D
     public Random Random;
     [Export] Node2D[] worlds;
     [Export] PackedScene[] Scenes;
-    Node2D _activeScene;
+    public Node2D _activeScene;
     string[] SceneNames;
     public God activeGod { get; set; }
     PlanetBuilder _planetBuilder;
@@ -40,11 +40,18 @@ public sealed partial class GameManager : Node2D
         AddChild(_populationManager);
         Random =  new Random();
         makeWorldsInvisible();
+        
+    }
+
+    public override void _Ready()
+    {
         SceneNames = new string[Scenes.Length];
         for (int i = 0; i < Scenes.Length; i++)
         {
-            SceneNames[i] = Scenes[i].ResourceName;
+            SceneNames[i] = Scenes[i].ResourcePath;
+            GD.Print("Scene Name: " + Scenes[i].ResourcePath);
         }
+        //_activeScene = setScene(0);
     }
 
     public void AddBiome(Biome biome)
@@ -70,7 +77,7 @@ public sealed partial class GameManager : Node2D
         }
     }
 
-    public void setScene(int inx, bool delete = true, bool keepRunning = false)
+    public Node2D setScene(int inx, bool delete = true, bool keepRunning = false)
     {
         if (delete)
         {
@@ -86,6 +93,7 @@ public sealed partial class GameManager : Node2D
         var newScene = GD.Load<PackedScene>(SceneNames[inx]).Instantiate();
         AddChild(newScene);
         _activeScene = (Node2D)newScene;
+        return _activeScene;
     }
 
     public void showWorld(int worldIndex)

@@ -4,11 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://p5h81q42c210" path="res://Scripts/Order/Components/Population/Frog/Frog.tscn" id="2_jpqfl"]
 [ext_resource type="PackedScene" uid="uid://bi5raiyhe0il1" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.tscn" id="3_nttsj"]
 [ext_resource type="PackedScene" uid="uid://clwirmnjsyjhi" path="res://Scripts/Order/Components/Population/Robot/Robot.tscn" id="4_opps3"]
-[ext_resource type="PackedScene" uid="uid://b4dpw11lm16t8" path="res://Scripts/God/marduk/Marduk.tscn" id="5_ta8j7"]
+[ext_resource type="PackedScene" uid="uid://c7nmptlkmleht" path="res://Fridays Scenes/0_title.tscn" id="5_ta8j7"]
+[ext_resource type="PackedScene" uid="uid://djtg4nwtcaenv" path="res://Fridays Scenes/1_take_order.tscn" id="6_jpqfl"]
 
 [node name="GameManager" type="Node2D" unique_id=1403278644 node_paths=PackedStringArray("worlds")]
 script = ExtResource("1_53sf8")
 _populations = Array[PackedScene]([ExtResource("2_jpqfl"), ExtResource("3_nttsj"), ExtResource("4_opps3")])
 worlds = []
-Gods = [ExtResource("5_ta8j7")]
-metadata/_edit_pinned_properties_ = [&"Gods", &"_populations"]
+Scenes = Array[PackedScene]([ExtResource("5_ta8j7"), ExtResource("6_jpqfl")])
+metadata/_edit_pinned_properties_ = [&"_populations", &"Scenes"]

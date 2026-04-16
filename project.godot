@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="NGJ2026"
-run/main_scene="uid://bl1gl25mox5ij"
+run/main_scene="uid://c7nmptlkmleht"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*uid://cvekid3uxyrwh"
+GameManager="*uid://cmpb3pm5dnl0v"
 
 [display]
 

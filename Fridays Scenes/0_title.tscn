@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://b2puq2onc53na"]
+[gd_scene format=3 uid="uid://c7nmptlkmleht"]
 
 [ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_74oq1"]
+[ext_resource type="Script" uid="uid://bnf0i535aspb1" path="res://Fridays Scenes/Title.cs" id="1_pqfie"]
 [ext_resource type="Texture2D" uid="uid://bywv3p1bdajj7" path="res://Art WIP/Title pixel.png" id="2_hgjuy"]
 [ext_resource type="Texture2D" uid="uid://cerqiu86ofr2w" path="res://Art WIP/Title2pixel.png" id="3_ycc88"]
 [ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_m454g"]
@@ -84,7 +85,10 @@ _data = {
 &"Universaria logo anim 2": SubResource("Animation_vxcvw")
 }
 
-[node name="Node2D" type="Node2D" unique_id=2105927121]
+[node name="Node2D" type="Node2D" unique_id=2105927121 node_paths=PackedStringArray("TitleAnimationPlayer", "TitleBackdropAnimationPlayer")]
+script = ExtResource("1_pqfie")
+TitleAnimationPlayer = NodePath("Universaria/AnimationPlayer")
+TitleBackdropAnimationPlayer = NodePath("UniversariaLogo2/AnimationPlayer")
 
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_74oq1")]
 
@@ -94,6 +98,7 @@ texture = ExtResource("2_hgjuy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Universaria" unique_id=1347418615]
 libraries/ = SubResource("AnimationLibrary_vxcvw")
+autoplay = &"Universaria Logo Anim"
 
 [node name="UniversariaLogo2" type="Sprite2D" parent="." unique_id=368463531]
 position = Vector2(199, 87)
@@ -101,6 +106,7 @@ texture = ExtResource("3_ycc88")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UniversariaLogo2" unique_id=446777642]
 libraries/ = SubResource("AnimationLibrary_3ekk1")
+autoplay = &"Universaria logo anim 2"
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1066890978]
 offset_left = 148.0
@@ -131,3 +137,5 @@ scale = Vector2(0.7, 0.7)
 theme_override_fonts/font = ExtResource("4_m454g")
 text = "By my Dad who works at nintendo"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureButton" to="." method="StartGame"]
