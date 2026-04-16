@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://djtg4nwtcaenv"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Levels/Fridays Scenes/background.tscn" id="1_tkelb"]
+[ext_resource type="PackedScene" uid="uid://dqdoc7h8h03iq" path="res://Levels/Fridays Scenes/IconsGeoFeatures.tscn" id="3_vf8cb"]
+[ext_resource type="PackedScene" uid="uid://xnf33h7thtif" path="res://Levels/Fridays Scenes/buttons_geo_features.tscn" id="4_erm21"]
+
+[node name="1 Take order" type="Node2D" unique_id=1311805470]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_tkelb")]
+position = Vector2(38, 210)
+
+[node name="VBoxContainer" parent="." unique_id=1502992773 instance=ExtResource("3_vf8cb")]
+z_index = -2
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 101.0
+offset_bottom = 233.0
+theme_override_constants/separation = 19
+
+[node name="Buttons Geo Features" parent="VBoxContainer" unique_id=1813746125 instance=ExtResource("4_erm21")]
+z_index = 3
+layout_mode = 2

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cjyeavao66gei"]
+
+[ext_resource type="Texture2D" uid="uid://q5asceshvieo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_normal.png" id="1_r2ni6"]
+[ext_resource type="Texture2D" uid="uid://c0b473holxhns" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_pressed.png" id="2_rkbtj"]
+[ext_resource type="Texture2D" uid="uid://d1vhyu5cki8x8" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_hover.png" id="3_fkyw6"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_p8ucg"]
+
+[sub_resource type="Theme" id="Theme_u3mqv"]
+
+[node name="Buttons Population" type="PanelContainer" unique_id=569575255]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1054856462]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = -19
+
+[node name="Long Buttons" type="VBoxContainer" parent="MarginContainer" unique_id=1650945309]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=575974208]
+layout_mode = 2
+texture_normal = ExtResource("1_r2ni6")
+texture_pressed = ExtResource("2_rkbtj")
+texture_hover = ExtResource("3_fkyw6")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton" unique_id=1612465530]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8599987
+offset_right = 137.61644
+offset_bottom = 18.859999
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_p8ucg")
+text = "frogs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=1000759622]
+layout_mode = 2
+texture_normal = ExtResource("1_r2ni6")
+texture_pressed = ExtResource("2_rkbtj")
+texture_hover = ExtResource("3_fkyw6")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton2" unique_id=1269102939]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_p8ucg")
+text = "hot babes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=2103550545]
+layout_mode = 2
+texture_normal = ExtResource("1_r2ni6")
+texture_pressed = ExtResource("2_rkbtj")
+texture_hover = ExtResource("3_fkyw6")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton3" unique_id=1181080421]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_p8ucg")
+text = "robots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="MarginContainer/Long Buttons" unique_id=822336302]
+layout_mode = 2
+texture_normal = ExtResource("1_r2ni6")
+texture_pressed = ExtResource("2_rkbtj")
+texture_hover = ExtResource("3_fkyw6")
+
+[node name="Label" type="Label" parent="MarginContainer/Long Buttons/TextureButton4" unique_id=1148217069]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.85998535
+offset_right = 137.61642
+offset_bottom = 18.859985
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_p8ucg")
+text = "thoughtful rock"
+horizontal_alignment = 1
+vertical_alignment = 1

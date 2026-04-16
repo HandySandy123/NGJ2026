@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cn3npj06hxjc0"]
 
 [ext_resource type="PackedScene" uid="uid://dv6k730aflfq1" path="res://Scripts/God/god.tscn" id="1_mncer"]
-[ext_resource type="PackedScene" uid="uid://dv4ertro2akvc" path="res://Scripts/Order/Components/Biome/Ice.tscn" id="2_wicfy"]
+[ext_resource type="PackedScene" uid="uid://dl3xu5v87us3f" path="res://Scripts/Order/Components/Biome/Ice.tscn" id="2_wicfy"]
 [ext_resource type="PackedScene" uid="uid://cu2fat4qwoqpj" path="res://Scripts/PopulationBrush/population_brush.tscn" id="3_go42g"]
 [ext_resource type="PackedScene" uid="uid://bi5raiyhe0il1" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.tscn" id="4_go42g"]
 [ext_resource type="Script" uid="uid://s14vrhnorw8n" path="res://Scripts/GameManager.cs" id="5_tq6uv"]
@@ -20,8 +20,8 @@ position = Vector2(198, 271)
 
 [node name="PopulationBrush" parent="." unique_id=1367516449 instance=ExtResource("3_go42g")]
 position = Vector2(-166, 97)
-_activePopulation = ExtResource("4_go42g")
 
-[node name="GameManager" type="Node2D" parent="." unique_id=1728787584]
+[node name="GameManager" type="Node2D" parent="." unique_id=1728787584 node_paths=PackedStringArray("worlds")]
 script = ExtResource("5_tq6uv")
 _populations = Array[PackedScene]([ExtResource("6_12c36"), ExtResource("4_go42g")])
+worlds = []

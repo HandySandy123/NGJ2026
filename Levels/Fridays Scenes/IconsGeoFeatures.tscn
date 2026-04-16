@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dqdoc7h8h03iq"]
+
+[ext_resource type="Texture2D" uid="uid://c3vaxrsbt7j5u" path="res://Art WIP/New assets/Small Elements/Mountain sprite.png" id="1_tam4k"]
+[ext_resource type="Texture2D" uid="uid://b7bcqkc7a7d4j" path="res://Art WIP/New assets/Small Elements/Acid Ball sprite.png" id="2_g1gtg"]
+[ext_resource type="Texture2D" uid="uid://bshfs2461pl3w" path="res://Art WIP/New assets/Small Elements/Lava sprite.png" id="3_420dp"]
+[ext_resource type="Texture2D" uid="uid://03tchiw44qcr" path="res://Art WIP/New assets/Small Elements/Water drop sprite.png" id="4_vidxg"]
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=1502992773]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.5
+offset_right = 34.5
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_constants/separation = 23
+
+[node name="Mountain" type="TextureRect" parent="." unique_id=1546279397]
+layout_mode = 2
+texture = ExtResource("1_tam4k")
+stretch_mode = 3
+
+[node name="Acid" type="TextureRect" parent="." unique_id=2086485]
+layout_mode = 2
+texture = ExtResource("2_g1gtg")
+stretch_mode = 3
+
+[node name="Lava" type="TextureRect" parent="." unique_id=205551209]
+layout_mode = 2
+texture = ExtResource("3_420dp")
+stretch_mode = 3
+
+[node name="Water" type="TextureRect" parent="." unique_id=27027675]
+layout_mode = 2
+texture = ExtResource("4_vidxg")
+stretch_mode = 3

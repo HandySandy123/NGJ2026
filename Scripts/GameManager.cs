@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Godot;
+using NGJ2026.Scripts.Order.Components.Biome;
 using NGJ2026.Scripts.Order.Components.Population;
 
 namespace NGJ2026.Scripts;
@@ -18,6 +19,7 @@ public sealed partial class GameManager : Node2D
     Node2D _activeScene;
     string[] SceneNames;
     public God activeGod { get; set; }
+    PlanetBuilder _planetBuilder;
 
     public enum SceneInd
     {
@@ -31,6 +33,8 @@ public sealed partial class GameManager : Node2D
     
     public override void _EnterTree()
     {
+        _planetBuilder = new PlanetBuilder();
+        AddChild(_planetBuilder);
         Instance = this;
         _populationManager = new PopulationManager(_populations);
         AddChild(_populationManager);
@@ -43,6 +47,21 @@ public sealed partial class GameManager : Node2D
         }
     }
 
+    public void AddBiome(Biome biome)
+    {
+        _planetBuilder.Biome = biome;
+    }
+
+    public void AddPopulation(Population population)
+    {
+        _planetBuilder.addPopulation(population);
+    }
+
+    public void AddGeographicalFeatures(GeographicalFeatures geographicalFeatures)
+    {
+        _planetBuilder.addGeographicalFeature(geographicalFeatures);
+    }
+ 
     private void makeWorldsInvisible()
     {
         foreach (var world in worlds)

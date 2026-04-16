@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cv04ig1whhqu2"]
+
+[ext_resource type="Texture2D" uid="uid://b1ju2vv1h3cvo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteNormal.png" id="1_lob18"]
+[ext_resource type="Texture2D" uid="uid://tqg775c14fpk" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteClickes.png" id="2_kl1um"]
+[ext_resource type="Texture2D" uid="uid://bi8vmuf3k3k1x" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteHover.png" id="3_5yplt"]
+[ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="4_m83bd"]
+[ext_resource type="Texture2D" uid="uid://bd23t0ds6qqcq" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowClicked.png" id="5_834u7"]
+[ext_resource type="Texture2D" uid="uid://durcam2okanph" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowHover.png" id="6_5nhvm"]
+
+[node name="Buttons Orb + Arrow" type="PanelContainer" unique_id=226686799]
+self_modulate = Color(0, 0, 0, 0)
+z_index = -1
+size_flags_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=223278335]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 186
+
+[node name="Orb" type="TextureButton" parent="HBoxContainer" unique_id=269357460]
+layout_mode = 2
+texture_normal = ExtResource("1_lob18")
+texture_pressed = ExtResource("2_kl1um")
+texture_hover = ExtResource("3_5yplt")
+
+[node name="Arrow" type="TextureButton" parent="HBoxContainer" unique_id=1458062619]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("4_m83bd")
+texture_pressed = ExtResource("5_834u7")
+texture_hover = ExtResource("6_5nhvm")

@@ -1,13 +1,4 @@
 [gd_scene format=3 uid="uid://145r7ij4deui"]
 
-[ext_resource type="PackedScene" uid="uid://degi2i6vjnsm4" path="res://ui_main.tscn" id="1_pg40h"]
-
 [node name="Buttons" type="Node2D" unique_id=1399291582]
 scale = Vector2(1.0000002, 1)
-
-[node name="UI Main" parent="." unique_id=1479713691 instance=ExtResource("1_pg40h")]
-offset_left = 203.00002
-offset_top = 122.0
-offset_right = 203.00002
-offset_bottom = 122.0
-scale = Vector2(0.98533535, 0.90650856)
