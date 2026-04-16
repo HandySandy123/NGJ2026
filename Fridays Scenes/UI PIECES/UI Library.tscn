@@ -35,6 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Buttons Population" type="PanelContainer" parent="PanelContainer" unique_id=1244353439]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 layout_mode = 2
@@ -134,7 +135,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Buttons Biome" type="PanelContainer" parent="PanelContainer" unique_id=1302418208]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 layout_mode = 2

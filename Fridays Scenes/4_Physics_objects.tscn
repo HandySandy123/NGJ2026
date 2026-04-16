@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c462w7138bew1"]
+
+[ext_resource type="Script" uid="uid://b5dj3uqb5pn8i" path="res://Fridays Scenes/OrbArrow.cs" id="1_t1ajb"]
+[ext_resource type="PackedScene" uid="uid://xnf33h7thtif" path="res://Fridays Scenes/UI PIECES/buttons_geo_features.tscn" id="2_dorbb"]
+[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/UI PIECES/buttons_orb_+_arrow.tscn" id="3_b6rkl"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI PIECES/UI decoration yellow_frame.tscn" id="4_il2y1"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="5_4jdlp"]
+[ext_resource type="PackedScene" uid="uid://dqdoc7h8h03iq" path="res://Fridays Scenes/UI PIECES/IconsGeoFeatures.tscn" id="6_dorbb"]
+
+[node name="Node2D" type="Node2D" unique_id=1581284509]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=693354995]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 240)
+offset_right = 400.0
+offset_bottom = 240.0
+script = ExtResource("1_t1ajb")
+
+[node name="Buttons Geo Features" parent="PanelContainer" unique_id=1813746125 instance=ExtResource("2_dorbb")]
+layout_mode = 2
+
+[node name="Buttons Orb + Arrow" parent="PanelContainer" unique_id=226686799 instance=ExtResource("3_b6rkl")]
+layout_mode = 2
+
+[node name="YellowFrame" parent="PanelContainer" unique_id=269234448 instance=ExtResource("4_il2y1")]
+position = Vector2(146, 119)
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("5_4jdlp")]
+
+[node name="VBoxContainer" parent="." unique_id=1502992773 instance=ExtResource("6_dorbb")]
+offset_left = 313.0
+offset_top = 3.0
+offset_right = 382.0
+offset_bottom = 232.0

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dmfd0ghybkjh0"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_qdc31"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI PIECES/UI decoration yellow_frame.tscn" id="2_mg3ph"]
+[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/UI PIECES/buttons_orb_+_arrow.tscn" id="3_kb24g"]
+[ext_resource type="PackedScene" uid="uid://cjyeavao66gei" path="res://Fridays Scenes/UI PIECES/buttons_population.tscn" id="4_irggu"]
+[ext_resource type="PackedScene" uid="uid://deijis8ydnbh3" path="res://Fridays Scenes/UI PIECES/IconsPopulationFeatures.tscn" id="5_aew7q"]
+
+[node name="Node2D" type="Node2D" unique_id=2129050600]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_qdc31")]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1353054585]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 240)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" parent="PanelContainer" unique_id=1970223924 instance=ExtResource("5_aew7q")]
+position = Vector2(283, -3)
+
+[node name="YellowFrame" parent="PanelContainer" unique_id=269234448 instance=ExtResource("2_mg3ph")]
+position = Vector2(146, 119)
+
+[node name="Buttons Orb + Arrow" parent="PanelContainer" unique_id=226686799 instance=ExtResource("3_kb24g")]
+layout_mode = 2
+
+[node name="Buttons Population" parent="PanelContainer" unique_id=569575255 instance=ExtResource("4_irggu")]
+layout_mode = 2

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cj5rwm3da114d"]
+
+[ext_resource type="Script" uid="uid://beq0673fqth5g" path="res://Levels/SP Levels/ChooseBiome/ChooseBiome.cs" id="1_3nkgu"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_q5nui"]
+[ext_resource type="PackedScene" uid="uid://tjh4iijtvfwu" path="res://Fridays Scenes/buttons_biome.tscn" id="3_u5din"]
+[ext_resource type="PackedScene" uid="uid://dl3xu5v87us3f" path="res://Scripts/Order/Components/Biome/Ice.tscn" id="4_0jxj6"]
+[ext_resource type="PackedScene" uid="uid://brprx8trkgdd3" path="res://Scripts/Order/Components/Biome/RockWorld.tscn" id="5_347mh"]
+[ext_resource type="PackedScene" uid="uid://b3falrgx01khi" path="res://Scripts/Order/Components/Biome/WaterWorld.tscn" id="6_7mu4t"]
+[ext_resource type="PackedScene" uid="uid://mb35prbbhexd" path="res://Scripts/Order/Components/Biome/DuckWorld.tscn" id="7_okyn0"]
+
+[node name="Choose Biome" type="Node2D" unique_id=450680276]
+script = ExtResource("1_3nkgu")
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_q5nui")]
+position = Vector2(227, 78)
+scale = Vector2(0.33882374, 0.33882374)
+
+[node name="Buttons Biome" parent="." unique_id=215432349 instance=ExtResource("3_u5din")]
+offset_left = 279.0
+offset_top = 8.0
+offset_right = 395.0
+offset_bottom = 231.0
+
+[node name="Worlds" type="Node2D" parent="." unique_id=545773848]
+position = Vector2(149, 140)
+
+[node name="Ice" parent="Worlds" unique_id=963932696 instance=ExtResource("4_0jxj6")]
+
+[node name="Rock" parent="Worlds" unique_id=756289289 instance=ExtResource("5_347mh")]
+
+[node name="Water" parent="Worlds" unique_id=1282039048 instance=ExtResource("6_7mu4t")]
+
+[node name="Duck" parent="Worlds" unique_id=10678765 instance=ExtResource("7_okyn0")]

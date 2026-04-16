@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://tjh4iijtvfwu"]
 
+[ext_resource type="Script" uid="uid://2wfsw5xaponx" path="res://Fridays Scenes/ButtonsBiome.cs" id="1_86yys"]
 [ext_resource type="Texture2D" uid="uid://dak6dnv42fexb" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_normal.png" id="1_ac552"]
 [ext_resource type="Texture2D" uid="uid://ciqyq40q53m1j" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_pressed.png" id="2_86yys"]
 [ext_resource type="Texture2D" uid="uid://dpg1l1jfx67a2" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_hover.png" id="3_6iarf"]
@@ -11,6 +12,7 @@
 self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 size_flags_horizontal = 8
+script = ExtResource("1_86yys")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2112857443]
 self_modulate = Color(1, 1, 1, 0)
@@ -102,3 +104,8 @@ theme_override_fonts/font = ExtResource("4_exogg")
 text = "rubber duck"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/Fat button row/TextureButton" to="." method="createWorld" binds= [0]]
+[connection signal="pressed" from="MarginContainer/Fat button row/TextureButton2" to="." method="createWorld" binds= [1]]
+[connection signal="pressed" from="MarginContainer/Fat button row/TextureButton3" to="." method="createWorld" binds= [2]]
+[connection signal="pressed" from="MarginContainer/Fat button row/TextureButton4" to="." method="createWorld" binds= [3]]
