@@ -1,0 +1,33 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvtm74edsrj3f"
+<<<<<<<< HEAD:atlas mus + god/michaelwave sounds.wav.import
+path="res://.godot/imported/michaelwave sounds.wav-07e677c52fd948c6308abdc3d12bcf69.sample"
+
+[deps]
+
+source_file="res://atlas mus + god/michaelwave sounds.wav"
+dest_files=["res://.godot/imported/michaelwave sounds.wav-07e677c52fd948c6308abdc3d12bcf69.sample"]
+========
+path="res://.godot/imported/michaelwave sounds.wav-480a325526126a7a29fb9f2fc6a3b7d3.sample"
+
+[deps]
+
+source_file="res://Art/Audio/SFX/michaelwave sounds.wav"
+dest_files=["res://.godot/imported/michaelwave sounds.wav-480a325526126a7a29fb9f2fc6a3b7d3.sample"]
+>>>>>>>> Menu-Switches:Art/Audio/SFX/michaelwave sounds.wav.import
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

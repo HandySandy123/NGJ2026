@@ -11,19 +11,19 @@ config_version=5
 [application]
 
 config/name="NGJ2026"
-run/main_scene="uid://d2j0mbqmdbri4"
+run/main_scene="uid://bl1gl25mox5ij"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*uid://cmpb3pm5dnl0v"
+GameManager="*uid://cvekid3uxyrwh"
 
 [display]
 
 window/size/viewport_width=400
 window/size/viewport_height=240
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0

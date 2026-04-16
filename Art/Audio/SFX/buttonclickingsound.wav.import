@@ -1,0 +1,33 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0dlxee4c81t4"
+<<<<<<<< HEAD:atlas mus + god/buttonclickingsound.wav.import
+path="res://.godot/imported/buttonclickingsound.wav-1e6790367f0c73a1bccbb594eb6c8981.sample"
+
+[deps]
+
+source_file="res://atlas mus + god/buttonclickingsound.wav"
+dest_files=["res://.godot/imported/buttonclickingsound.wav-1e6790367f0c73a1bccbb594eb6c8981.sample"]
+========
+path="res://.godot/imported/buttonclickingsound.wav-7cb4001a95a449b4df3261b14486fff3.sample"
+
+[deps]
+
+source_file="res://Art/Audio/SFX/buttonclickingsound.wav"
+dest_files=["res://.godot/imported/buttonclickingsound.wav-7cb4001a95a449b4df3261b14486fff3.sample"]
+>>>>>>>> Menu-Switches:Art/Audio/SFX/buttonclickingsound.wav.import
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

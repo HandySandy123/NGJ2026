@@ -1,0 +1,33 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cq807c5rrpnay"
+<<<<<<<< HEAD:atlas mus + god/bgmusicremixed.wav.import
+path="res://.godot/imported/bgmusicremixed.wav-ceced96ab9103c3fe6c2ed92472fe703.sample"
+
+[deps]
+
+source_file="res://atlas mus + god/bgmusicremixed.wav"
+dest_files=["res://.godot/imported/bgmusicremixed.wav-ceced96ab9103c3fe6c2ed92472fe703.sample"]
+========
+path="res://.godot/imported/bgmusicremixed.wav-76d6c6aa0f115c268602ff453104d6fa.sample"
+
+[deps]
+
+source_file="res://Art/Audio/Music/bgmusicremixed.wav"
+dest_files=["res://.godot/imported/bgmusicremixed.wav-76d6c6aa0f115c268602ff453104d6fa.sample"]
+>>>>>>>> Menu-Switches:Art/Audio/Music/bgmusicremixed.wav.import
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
