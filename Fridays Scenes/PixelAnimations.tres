@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c0mlqollwtfsl" path="res://Art WIP/New assets/Small Elements/Bell sprite animation3.png" id="3_1e0wl"]
 [ext_resource type="Texture2D" uid="uid://bf3moaos25mk3" path="res://Art WIP/Dummy assets/Anims/microwave universe animated3.png" id="3_rump8"]
 [ext_resource type="Texture2D" uid="uid://d3qtgg7gty50o" path="res://Art WIP/New assets/Small Elements/Bell sprite animation4.png" id="4_gidcp"]
+[ext_resource type="Texture2D" uid="uid://dhkfta4uayee6" path="res://Art WIP/Dummy assets/BG Elements/3MicrowaveClosedAnimated1.png" id="5_sk7nb"]
+[ext_resource type="Texture2D" uid="uid://1m0nirknhqhe" path="res://Art WIP/Dummy assets/BG Elements/3MicrowaveClosedAnimated3.png" id="6_qd6nn"]
 
 [resource]
 animations = [{
@@ -29,6 +31,17 @@ animations = [{
 "loop": false,
 "name": &"Bell Riniging",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sk7nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qd6nn")
+}],
+"loop": true,
+"name": &"Microwave Cooking",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,

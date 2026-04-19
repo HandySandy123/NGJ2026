@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bh8la2g5tm2qw"]
+
+[ext_resource type="Texture2D" uid="uid://dak6dnv42fexb" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_normal.png" id="1_vb4pd"]
+[ext_resource type="Texture2D" uid="uid://ciqyq40q53m1j" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_pressed.png" id="2_b5trm"]
+[ext_resource type="Texture2D" uid="uid://dpg1l1jfx67a2" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/FatButton_hover.png" id="3_2po7f"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="4_klq7q"]
+
+[sub_resource type="Theme" id="Theme_u3mqv"]
+
+[node name="Start Button" type="TextureButton" unique_id=1905277044]
+offset_left = 73.0
+offset_top = 83.0
+offset_right = 173.0
+offset_bottom = 126.0
+texture_normal = ExtResource("1_vb4pd")
+texture_pressed = ExtResource("2_b5trm")
+texture_hover = ExtResource("3_2po7f")
+
+[node name="Label" type="Label" parent="." unique_id=1976612189]
+layout_mode = 0
+offset_left = 8.000019
+offset_top = 4.0000024
+offset_right = 101.999985
+offset_bottom = 43.000004
+scale = Vector2(0.9, 0.9)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("4_klq7q")
+text = "cook 
+world"
+horizontal_alignment = 1
+vertical_alignment = 1

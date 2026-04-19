@@ -1,21 +1,23 @@
 [gd_scene format=3 uid="uid://bdg06k3lqr63m"]
 
-[ext_resource type="PackedScene" uid="uid://dxpk1jyho6eh0" path="res://Fridays Scenes/Decending_crunched_shoe_god.tscn" id="1_duajg"]
+[ext_resource type="PackedScene" uid="uid://dxpk1jyho6eh0" path="res://Fridays Scenes/UI PIECES/Decending_crunched_shoe_god.tscn" id="1_duajg"]
 [ext_resource type="Texture2D" uid="uid://l4hq0mg7mncx" path="res://Art WIP/Dummy assets/BG Elements/1Counter sprite.png" id="2_duajg"]
 [ext_resource type="SpriteFrames" uid="uid://6ugrpdp74gpl" path="res://Fridays Scenes/PixelAnimations.tres" id="3_xq6b3"]
 
 [node name="Node2D" type="Node2D" unique_id=1305984442]
 
 [node name="CrunchedShoeGod" parent="." unique_id=1360251988 instance=ExtResource("1_duajg")]
+visible = false
 position = Vector2(311, 111)
 
 [node name="1CounterSprite" type="Sprite2D" parent="." unique_id=1891476273]
+visible = false
 position = Vector2(132, 126)
 texture = ExtResource("2_duajg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=574798858]
-position = Vector2(188, 93)
+position = Vector2(199, 120)
 sprite_frames = ExtResource("3_xq6b3")
-animation = &"Bell Riniging"
-frame = 4
-frame_progress = 1.0
+animation = &"Microwave Cooking"
+frame = 1
+frame_progress = 0.33123824
