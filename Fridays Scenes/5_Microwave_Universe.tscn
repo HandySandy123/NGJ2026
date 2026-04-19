@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dw4v2at0bnwio"]
+
+[ext_resource type="SpriteFrames" uid="uid://6ugrpdp74gpl" path="res://Fridays Scenes/PixelAnimations.tres" id="1_gc46q"]
+[ext_resource type="PackedScene" uid="uid://dktxebfk4ql5h" path="res://Fridays Scenes/UI PIECES/button_orb.tscn" id="1_iuygy"]
+[ext_resource type="Texture2D" uid="uid://sk52olt3av61" path="res://Art WIP/Dummy assets/BG Elements/4MicrowaveOopenAnimated1.png" id="1_kkd7r"]
+[ext_resource type="Script" uid="uid://c17pwsfft6rx6" path="res://Fridays Scenes/OpenMicrowave.cs" id="2_dqy5l"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="2_ml5yh"]
+[ext_resource type="Script" uid="uid://y0s2uwtg2lk7" path="res://Fridays Scenes/UniverseSpinning.cs" id="4_81w2v"]
+[ext_resource type="PackedScene" uid="uid://bh8la2g5tm2qw" path="res://Fridays Scenes/UI PIECES/Cook_button.tscn" id="4_ay0uk"]
+[ext_resource type="Script" uid="uid://ce7l10dii023s" path="res://Fridays Scenes/Cooking.cs" id="4_o84gk"]
+[ext_resource type="Script" uid="uid://qblngm8ie3jd" path="res://Fridays Scenes/UI PIECES/CookButton.cs" id="8_tirmc"]
+
+[node name="Node2D" type="Node2D" unique_id=310033388]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=264088822]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 240)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 400.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OpenMicrowave" type="Sprite2D" parent="PanelContainer" unique_id=804730066]
+position = Vector2(200, 120)
+texture = ExtResource("1_kkd7r")
+script = ExtResource("2_dqy5l")
+
+[node name="Universe Spinning" type="AnimatedSprite2D" parent="PanelContainer/OpenMicrowave" unique_id=1202449562]
+visible = false
+position = Vector2(-12, -5)
+sprite_frames = ExtResource("1_gc46q")
+animation = &"Universe Spinning"
+script = ExtResource("4_81w2v")
+
+[node name="Cooking" type="AnimatedSprite2D" parent="PanelContainer" unique_id=963581997 node_paths=PackedStringArray("CookingTimer")]
+visible = false
+position = Vector2(200, 120)
+sprite_frames = ExtResource("1_gc46q")
+animation = &"Microwave Cooking"
+frame_progress = 0.6470754
+script = ExtResource("4_o84gk")
+CookingTimer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="PanelContainer/Cooking" unique_id=19032293]
+wait_time = 2.0
+
+[node name="Button Orb" parent="PanelContainer" unique_id=1235274145 instance=ExtResource("1_iuygy")]
+layout_mode = 2
+
+[node name="Cook Button" parent="PanelContainer" unique_id=1905277044 instance=ExtResource("4_ay0uk")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+script = ExtResource("8_tirmc")
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("2_ml5yh")]
+
+[connection signal="timeout" from="PanelContainer/Cooking/Timer" to="PanelContainer/OpenMicrowave" method="openMicrowave" binds= [true]]
+[connection signal="timeout" from="PanelContainer/Cooking/Timer" to="PanelContainer/OpenMicrowave/Universe Spinning" method="RevealUniverse" binds= [true]]
+[connection signal="timeout" from="PanelContainer/Cooking/Timer" to="PanelContainer/Cooking" method="UniverseCooked" binds= [false]]
+[connection signal="timeout" from="PanelContainer/Cooking/Timer" to="PanelContainer/Cook Button" method="ButtonVisibility" binds= [false]]
+[connection signal="pressed" from="PanelContainer/Cook Button" to="PanelContainer/Cooking" method="StartTimer"]
+[connection signal="pressed" from="PanelContainer/Cook Button" to="PanelContainer/OpenMicrowave" method="closeMicrowave" binds= [false]]
+[connection signal="pressed" from="PanelContainer/Cook Button" to="PanelContainer/Cooking" method="CookingUniverse" binds= [true]]

@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="11_grgqg"]
 [ext_resource type="Texture2D" uid="uid://bd23t0ds6qqcq" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowClicked.png" id="12_hu82q"]
 [ext_resource type="Texture2D" uid="uid://durcam2okanph" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowHover.png" id="13_28kl8"]
+[ext_resource type="PackedScene" uid="uid://bh8la2g5tm2qw" path="res://Fridays Scenes/UI PIECES/Cook_button.tscn" id="15_yb2mm"]
 
 [sub_resource type="Theme" id="Theme_u3mqv"]
 
@@ -135,6 +136,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Buttons Biome" type="PanelContainer" parent="PanelContainer" unique_id=1302418208]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 layout_mode = 2
@@ -331,6 +333,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Orb + Arrow" type="PanelContainer" parent="PanelContainer" unique_id=449408837]
+visible = false
 self_modulate = Color(0, 0, 0, 0)
 z_index = -1
 layout_mode = 2
@@ -371,3 +374,10 @@ texture_hover = ExtResource("10_8gi0e")
 position = Vector2(146.4983, 120)
 scale = Vector2(1, 1.005)
 texture = ExtResource("8_ktxnj")
+
+[node name="Start Button" parent="." unique_id=1905277044 instance=ExtResource("15_yb2mm")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 100.0
+offset_bottom = 43.0

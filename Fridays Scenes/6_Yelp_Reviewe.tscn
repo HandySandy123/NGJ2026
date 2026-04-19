@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b84kbshbrw770"]
+
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_qiixr"]
+[ext_resource type="Texture2D" uid="uid://bt6unu4kutovg" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/YELPREVIEW_Frames.png" id="2_58ypl"]
+[ext_resource type="Texture2D" uid="uid://6eh41atfrps1" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/YELPREVIEW_0Stars.png" id="3_pm2pa"]
+[ext_resource type="Texture2D" uid="uid://7o2ekidc42hy" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/YELPREVIEW_5Stars.png" id="4_jdyo2"]
+
+[node name="Node2D" type="Node2D" unique_id=990251414]
+
+[node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_qiixr")]
+
+[node name="YelpreviewFrames" type="Sprite2D" parent="." unique_id=1877452398]
+position = Vector2(200, 360)
+texture = ExtResource("2_58ypl")
+
+[node name="Yelpreview0Stars" type="Sprite2D" parent="." unique_id=2006127720]
+position = Vector2(131, 152)
+texture = ExtResource("3_pm2pa")
+
+[node name="Yelpreview5Stars" type="Sprite2D" parent="." unique_id=800536601]
+position = Vector2(131, 152)
+texture = ExtResource("4_jdyo2")
