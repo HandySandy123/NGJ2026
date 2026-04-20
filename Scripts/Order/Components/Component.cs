@@ -6,6 +6,6 @@ public partial class Component : Node2D
 {
     [Export] private float SlimeDustScore;
     [Export] private float FunnyScaryScore;
-    private string Name;
+    private string CompName;
     
 }

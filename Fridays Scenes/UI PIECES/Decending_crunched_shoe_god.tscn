@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://dxpk1jyho6eh0"]
 
 [ext_resource type="Texture2D" uid="uid://dcy1spnenhfiq" path="res://Art/Gods/crunchedShoeGod.png" id="1_fi858"]
-[ext_resource type="AnimationLibrary" uid="uid://xoqat10yvcyf" path="res://Fridays Scenes/Universaria.res" id="2_ewkld"]
+[ext_resource type="Script" uid="uid://ckadnb1ed3vft" path="res://Scripts/God/God.cs" id="2_37snp"]
+[ext_resource type="AnimationLibrary" path="res://Fridays Scenes/Universaria.res" id="2_ewkld"]
+[ext_resource type="Script" uid="uid://du2cm0i73406s" path="res://Scripts/God/Order.cs" id="4_x4v2i"]
+[ext_resource type="Texture2D" uid="uid://cxpoma25hhh7d" path="res://Art/SRD_comic_clouds_4-3594411102.png" id="5_y7rwl"]
+[ext_resource type="Script" uid="uid://dxkobtk0n7mse" path="res://Scripts/God/SpeechBubble.cs" id="6_eyoyf"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="7_x4v2i"]
 
 [sub_resource type="Animation" id="Animation_xq6b3"]
 resource_name = "GodDecending"
@@ -41,9 +46,39 @@ _data = {
 &"RESET": SubResource("Animation_duajg")
 }
 
-[node name="CrunchedShoeGod" type="Sprite2D" unique_id=1360251988]
+[sub_resource type="LabelSettings" id="LabelSettings_y7rwl"]
+font = ExtResource("7_x4v2i")
+font_color = Color(0, 0, 0, 1)
+
+[node name="CrunchedShoeGod" type="Sprite2D" unique_id=1360251988 node_paths=PackedStringArray("order", "speechBubble")]
+position = Vector2(311, 111)
 texture = ExtResource("1_fi858")
+script = ExtResource("2_37snp")
+order = NodePath("Order")
+speechBubble = NodePath("SpeechBubble")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1108147401]
 libraries/ = SubResource("AnimationLibrary_bopw8")
 libraries/Universaria = ExtResource("2_ewkld")
+speed_scale = 4.0
+
+[node name="Order" type="Node2D" parent="." unique_id=1779010977]
+script = ExtResource("4_x4v2i")
+order = PackedStringArray("Hi can I have", "uuuuhhhh.....", "hot babes on cold? ")
+
+[node name="SpeechBubble" type="Sprite2D" parent="." unique_id=2041467263 node_paths=PackedStringArray("label")]
+visible = false
+position = Vector2(-21, -38)
+texture = ExtResource("5_y7rwl")
+flip_h = true
+script = ExtResource("6_eyoyf")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="SpeechBubble" unique_id=1331975969]
+offset_left = -62.0
+offset_top = -50.0
+offset_right = 63.0
+offset_bottom = 18.0
+label_settings = SubResource("LabelSettings_y7rwl")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="setOrdering" binds= [true]]

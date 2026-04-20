@@ -4,49 +4,39 @@ using NGJ2026.Scripts;
 
 public partial class TakeOrder : Node2D
 {
-	[Export]OrbArrow orbArrow;
+	[Export]NGJ2026.Fridays_Scenes.OrbArrow orbArrow;
 	[Export] private Node2D godSpot;
 	[Export] private PackedScene[] Gods;
 	private God chosenGod;
+	private int sceneIndex;
 
 	
 	public void showGod()
 	{
 		chosenGod.Visible = true;
-		chosenGod.ordering = true;
+		chosenGod.revealGod();
 	}
 	private void chooseGod()
 	{
 		var ind = GameManager.Instance.Random.Next(Gods.Length);
-		GD.Print(ind);
 		var instance = Gods[ind].Instantiate();
 		GD.Print(instance.Name + " selected");
 		chosenGod = (God)instance;
 		AddChild(chosenGod);
-	}
-
-	public void takeOrder()
-	{
-		chosenGod.ordering = true;
+		chosenGod.Position = godSpot.Position;
 	}
 
 	public override void _EnterTree()
 	{
 		chooseGod();
-		orbArrow.showGod += showGod;
+		//orbArrow.showGod += showGod;
 		chosenGod.doneOrdering += orbArrow.setArrow;
+		sceneIndex = 1;
 	}
 
 	public override void _ExitTree()
 	{
-		orbArrow.showGod -= showGod;
+		//orbArrow.showGod -= showGod;
 		chosenGod.doneOrdering -= orbArrow.setArrow;
-
-	}
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		chosenGod.Visible = false;
-		chosenGod.Position = godSpot.Position;
 	}
 }

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://cmpb3pm5dnl0v"
+PlanetBuilder="*uid://daumilqj8wr34"
 
 [display]
 
@@ -34,7 +35,7 @@ project/assembly_name="NGJ2026"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
+enabled=PackedStringArray("res://addons/vector_display_2d/plugin.cfg")
 
 [input]
 

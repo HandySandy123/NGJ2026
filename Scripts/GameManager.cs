@@ -9,42 +9,28 @@ namespace NGJ2026.Scripts;
 public sealed partial class GameManager : Node2D
 {
     public static GameManager Instance { get; private set; }
-    PopulationManager _populationManager;
-    [Export]PackedScene[] _populations;
-    [Export] public PopulationBrush.PopulationBrush _populationBrush;
+    
     public Vector2 MousePosition;
     public Random Random;
-    [Export] Node2D[] worlds;
     [Export] PackedScene[] Scenes;
     public Node2D _activeScene;
     string[] SceneNames;
     public God activeGod { get; set; }
-    PlanetBuilder _planetBuilder;
-
-    public enum SceneInd
-    {
-        TakeOrder,
-        ChooseWorld,
-        Population,
-        PhysicsObject,
-        CookWorld,
-        Review
-    }
+    public PlanetBuilder _planetBuilder;
+    public int levelIdx;
     
     public override void _EnterTree()
     {
-        _planetBuilder = new PlanetBuilder();
-        AddChild(_planetBuilder);
+        
         Instance = this;
-        _populationManager = new PopulationManager(_populations);
-        AddChild(_populationManager);
+        
         Random =  new Random();
-        makeWorldsInvisible();
         
     }
 
     public override void _Ready()
     {
+        _planetBuilder = PlanetBuilder.Instance;
         SceneNames = new string[Scenes.Length];
         for (int i = 0; i < Scenes.Length; i++)
         {
@@ -68,17 +54,14 @@ public sealed partial class GameManager : Node2D
     {
         _planetBuilder.addGeographicalFeature(geographicalFeatures);
     }
- 
-    private void makeWorldsInvisible()
-    {
-        foreach (var world in worlds)
-        {
-            world.Visible = false;
-        }
-    }
 
     public Node2D setScene(int inx, bool delete = true, bool keepRunning = false)
     {
+        if (inx < 0 || inx >= SceneNames.Length)
+        {
+            GD.Print("inx is out of range");
+            return null;
+        }
         if (delete)
         {
             _activeScene.QueueFree();
@@ -96,33 +79,10 @@ public sealed partial class GameManager : Node2D
         return _activeScene;
     }
 
-    public void showWorld(int worldIndex)
-    {
-        makeWorldsInvisible();
-        worlds[worldIndex].Visible = true;
-    }
-
     public override void _Process(double delta)
     {
         MousePosition = GetGlobalMousePosition();
     }
 
-    public void setActivePopulation(Population population)
-    {
-        _populationBrush.setPopulation(population);
-    }
-
-    public Population _requestPopulation(string name)
-    {
-        if (_populationManager.getPopulation(name) != null)
-        {
-            GD.Print("Population of " + name + " found");
-            return _populationManager.getPopulation(name);
-        }
-        else
-        {
-            GD.Print("No population found");
-            return null;
-        }
-    }
+    
 }

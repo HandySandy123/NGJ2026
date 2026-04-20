@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://dkdkwvrpbfla4"]
+[gd_scene format=3 uid="uid://daumilqj8wr34"]
 
 [ext_resource type="Script" uid="uid://cynylrd70276j" path="res://PlanetBuilder.cs" id="1_2v1h4"]
+[ext_resource type="PackedScene" uid="uid://b3falrgx01khi" path="res://Scripts/Order/Components/Biome/WaterWorld.tscn" id="2_plt47"]
 
 [node name="Node2D" type="Node2D" unique_id=1594548449]
 script = ExtResource("1_2v1h4")
+placeHolderBiome = ExtResource("2_plt47")
+BiomeSpot = Vector2(127, 133)

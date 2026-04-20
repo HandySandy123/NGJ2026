@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using NGJ2026.Scripts.Order.Components.Biome;
 using NGJ2026.Scripts.Order.Components.Population;
 using NGJ2026.Scripts.Order.Components.Population.Hot_Babes;
 using NGJ2026.Scripts.Order.Components.Population.Robot;
@@ -13,52 +14,59 @@ public partial class PopulationBrush : Node2D
     private float density = 0.3f;
     [Export] private int resolution = 10;
     private Vector2 center;
-    private Population _activePopulation;
+    [Export] private PackedScene[] _populations;
+    private PackedScene _activePopulation;
+    [Export] private PackedScene thoughtfulRocks;
+    Timer timer;
     static readonly Random random = new Random();
+    private bool canDraw = false;
 
-    public override void _EnterTree()
+    public void setPopulation(int population)
     {
-        GameManager.Instance._populationBrush = this;
+        _activePopulation = GD.Load<PackedScene>(_populations[population].ResourcePath);
     }
 
-    public void setPopulation(Population population)
+    public override void _Ready()
     {
-        _activePopulation = population;
+        timer = (Timer)GetNode("Timer");
+        if(timer != null) GD.Print("Timer found");
+    }
+
+    public void CanDraw(bool val)
+    {
+        canDraw = val;
+    }
+
+    public override void _Process(double delta)
+    {
+        Position = GetGlobalMousePosition();
     }
 
     public void onTimerTimeout()
     {
         center = GameManager.Instance.MousePosition;
         Position = center;
-        if (Input.IsActionPressed("OnClick") && _activePopulation != null)
+        if (Input.IsActionPressed("OnClick") && _activePopulation != null && canDraw)
         {
-            //GD.Print("OnClick");
-            // int angle = random.Next(360); 
-            // var X = Mathf.FloorToInt(center.X + radius * Mathf.Cos(angle));
-            // var Y = Mathf.FloorToInt(center.Y + radius * Mathf.Sin(angle));
-            var node = (Population)_activePopulation.Duplicate();
-            // switch (_activePopulation.PopName)
+            var pop = (Node2D)_activePopulation.Instantiate();
+            // if (_activePopulation.ResourcePath == thoughtfulRocks.ResourcePath)
             // {
-            //     case "Frogs": 
-            //         node = (Frogs) node;
-            //         break;
-            //     case "Hot Babes":
-            //         node = (HotBabes) node;
-            //         break;
-            //     case "Robot":
-            //         node = (Robot)node;
-            //         break;
+            //     timer.WaitTime = 10;
             // }
-            //
-            AddSibling(node);
-            GD.Print("Added " + node.PopName);
-            node.Spawn(Mathf.CeilToInt(Position.X), Mathf.CeilToInt(Position.Y));
+            // else
+            // {
+            //     timer.WaitTime = 0.1f;
+            // }
+            if (pop is Population population)
+            {
+                PlanetBuilder.Instance.addPopulation(population);
+                AddSibling(population);
+                var r = (float)radius * Mathf.Sqrt(GameManager.Instance.Random.NextDouble()) ;
+                var theta = (float)GameManager.Instance.Random.NextDouble() * 2 * Mathf.Pi;
+                population.Spawn((float)(Position.X + r * Mathf.Cos(theta)), 
+                                 (float)(Position.Y + r * Mathf.Sin(theta)));
+            }
+            
         }
-    }
-
-    public override void _Process(double delta)
-    {
-        
-        
     }
 }

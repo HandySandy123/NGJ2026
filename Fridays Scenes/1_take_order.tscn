@@ -1,12 +1,24 @@
 [gd_scene format=3 uid="uid://djtg4nwtcaenv"]
 
-[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_tkelb"]
-[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/buttons_orb_+_arrow.tscn" id="2_v36aa"]
+[ext_resource type="Script" uid="uid://dgvysib7age7c" path="res://Levels/SP Levels/TakeOrder/TakeOrder.cs" id="1_0nj7x"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Levels/Fridays Scenes/background.tscn" id="1_tkelb"]
 [ext_resource type="Texture2D" uid="uid://l4hq0mg7mncx" path="res://Art WIP/Dummy assets/BG Elements/1Counter sprite.png" id="3_vf8cb"]
-[ext_resource type="PackedScene" uid="uid://dxpk1jyho6eh0" path="res://Fridays Scenes/Decending_crunched_shoe_god.tscn" id="4_erm21"]
-[ext_resource type="SpriteFrames" uid="uid://6ugrpdp74gpl" path="res://Fridays Scenes/PixelAnimations.tres" id="5_k7f0e"]
+[ext_resource type="PackedScene" uid="uid://dxpk1jyho6eh0" path="res://Fridays Scenes/UI PIECES/Decending_crunched_shoe_god.tscn" id="4_erm21"]
+[ext_resource type="Script" uid="uid://b5dj3uqb5pn8i" path="res://Fridays Scenes/OrbArrow.cs" id="4_llra2"]
+[ext_resource type="Texture2D" uid="uid://b1ju2vv1h3cvo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteNormal.png" id="5_gkki8"]
+[ext_resource type="SpriteFrames" uid="uid://cdrwiu1b871su" path="res://Fridays Scenes/PixelAnimations.tres" id="5_k7f0e"]
+[ext_resource type="Texture2D" uid="uid://tqg775c14fpk" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteClickes.png" id="6_nudvl"]
+[ext_resource type="Texture2D" uid="uid://bi8vmuf3k3k1x" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteHover.png" id="7_3isvm"]
+[ext_resource type="Script" uid="uid://ccq78ruum4asv" path="res://Fridays Scenes/Bell.cs" id="7_4df4l"]
+[ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="8_7amj6"]
+[ext_resource type="Texture2D" uid="uid://bd23t0ds6qqcq" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowClicked.png" id="9_meb85"]
+[ext_resource type="Texture2D" uid="uid://durcam2okanph" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowHover.png" id="10_f62wp"]
 
-[node name="1 Take order" type="Node2D" unique_id=1311805470]
+[node name="1 Take order" type="Node2D" unique_id=1311805470 node_paths=PackedStringArray("orbArrow", "godSpot")]
+script = ExtResource("1_0nj7x")
+orbArrow = NodePath("PanelContainer/Buttons Orb + Arrow")
+godSpot = NodePath("Node2D")
+Gods = Array[PackedScene]([ExtResource("4_erm21")])
 
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_tkelb")]
 
@@ -21,17 +33,59 @@ offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Buttons Orb + Arrow" parent="PanelContainer" unique_id=226686799 instance=ExtResource("2_v36aa")]
+[node name="Buttons Orb + Arrow" type="PanelContainer" parent="PanelContainer" unique_id=226686799 node_paths=PackedStringArray("orb", "arrow")]
+self_modulate = Color(0, 0, 0, 0)
+z_index = -1
 layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("4_llra2")
+orb = NodePath("HBoxContainer/Orb")
+arrow = NodePath("HBoxContainer/Arrow")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Buttons Orb + Arrow" unique_id=223278335]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 201
+
+[node name="Orb" type="TextureButton" parent="PanelContainer/Buttons Orb + Arrow/HBoxContainer" unique_id=269357460]
+layout_mode = 2
+texture_normal = ExtResource("5_gkki8")
+texture_pressed = ExtResource("6_nudvl")
+texture_hover = ExtResource("7_3isvm")
+
+[node name="Arrow" type="TextureButton" parent="PanelContainer/Buttons Orb + Arrow/HBoxContainer" unique_id=1458062619]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("8_7amj6")
+texture_pressed = ExtResource("9_meb85")
+texture_hover = ExtResource("10_f62wp")
 
 [node name="1CounterSprite" type="Sprite2D" parent="." unique_id=1758713674]
 position = Vector2(129, 134)
 texture = ExtResource("3_vf8cb")
 
-[node name="CrunchedShoeGod" parent="." unique_id=1360251988 instance=ExtResource("4_erm21")]
-position = Vector2(311, 111)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1673953567]
+[node name="Bell" type="AnimatedSprite2D" parent="." unique_id=1673953567]
 position = Vector2(179, 101)
 sprite_frames = ExtResource("5_k7f0e")
-animation = &"Bell Riniging"
+animation = &"Bell Ringing"
+script = ExtResource("7_4df4l")
+
+[node name="Button" type="Button" parent="Bell" unique_id=653720129]
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.0
+offset_top = -4.0
+offset_right = 10.0
+offset_bottom = 11.0
+
+[node name="Timer" type="Timer" parent="Bell" unique_id=1071478964]
+wait_time = 1.5
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="." unique_id=329377467]
+position = Vector2(186, -76)
+
+[connection signal="pressed" from="PanelContainer/Buttons Orb + Arrow/HBoxContainer/Arrow" to="PanelContainer/Buttons Orb + Arrow" method="nextLevel" binds= [2]]
+[connection signal="pressed" from="Bell/Button" to="." method="showGod"]
+[connection signal="pressed" from="Bell/Button" to="Bell" method="setRinging" binds= [false]]
+[connection signal="timeout" from="Bell/Timer" to="Bell" method="ring"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://mb35prbbhexd"]
 
 [ext_resource type="Texture2D" uid="uid://kutr0hdppyo8" path="res://Art WIP/PhysicsOBJECTS/Planet/Rubber duck planet.png" id="1_511sq"]
+[ext_resource type="Script" uid="uid://bgo3dnk13kkbt" path="res://Scripts/Order/Components/Biome/Biome.cs" id="1_y4150"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hcgo"]
 size = Vector2(3.5705032, 10.335071)
@@ -8,6 +9,7 @@ size = Vector2(3.5705032, 10.335071)
 [sub_resource type="CircleShape2D" id="CircleShape2D_y4150"]
 
 [node name="Duck" type="Node2D" unique_id=963932696]
+script = ExtResource("1_y4150")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729157121]
 texture = ExtResource("1_511sq")

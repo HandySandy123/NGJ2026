@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://cmpb3pm5dnl0v"]
 
 [ext_resource type="Script" uid="uid://s14vrhnorw8n" path="res://Scripts/GameManager.cs" id="1_53sf8"]
-[ext_resource type="PackedScene" uid="uid://p5h81q42c210" path="res://Scripts/Order/Components/Population/Frog/Frog.tscn" id="2_jpqfl"]
-[ext_resource type="PackedScene" uid="uid://bi5raiyhe0il1" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.tscn" id="3_nttsj"]
-[ext_resource type="PackedScene" uid="uid://clwirmnjsyjhi" path="res://Scripts/Order/Components/Population/Robot/Robot.tscn" id="4_opps3"]
 [ext_resource type="PackedScene" uid="uid://c7nmptlkmleht" path="res://Fridays Scenes/0_title.tscn" id="5_ta8j7"]
 [ext_resource type="PackedScene" uid="uid://djtg4nwtcaenv" path="res://Fridays Scenes/1_take_order.tscn" id="6_jpqfl"]
+[ext_resource type="AudioStream" uid="uid://b2mi52at8s4ff" path="res://atlas mus + god/bgmusic.wav" id="7_nttsj"]
+[ext_resource type="PackedScene" uid="uid://cyynqlg2aaj5y" path="res://Fridays Scenes/2_Choose_world.tscn" id="7_opps3"]
+[ext_resource type="PackedScene" uid="uid://chciypmqe0thv" path="res://Fridays Scenes/3_Population.tscn" id="8_ta8j7"]
 
-[node name="GameManager" type="Node2D" unique_id=1403278644 node_paths=PackedStringArray("worlds")]
+[node name="GameManager" type="Node2D" unique_id=1403278644]
 script = ExtResource("1_53sf8")
-_populations = Array[PackedScene]([ExtResource("2_jpqfl"), ExtResource("3_nttsj"), ExtResource("4_opps3")])
-worlds = []
-Scenes = Array[PackedScene]([ExtResource("5_ta8j7"), ExtResource("6_jpqfl")])
-metadata/_edit_pinned_properties_ = [&"_populations", &"Scenes"]
+Scenes = Array[PackedScene]([ExtResource("5_ta8j7"), ExtResource("6_jpqfl"), ExtResource("7_opps3"), ExtResource("8_ta8j7")])
+metadata/_edit_pinned_properties_ = [&"Scenes"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=168635396]
+stream = ExtResource("7_nttsj")

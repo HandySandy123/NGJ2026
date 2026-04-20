@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://6ugrpdp74gpl"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://cdrwiu1b871su"]
 
 [ext_resource type="Texture2D" uid="uid://b2gm0olnaf8c1" path="res://Art WIP/Dummy assets/Anims/microwave universe animated1.png" id="1_imb40"]
 [ext_resource type="Texture2D" uid="uid://w0s65lifu5lu" path="res://Art WIP/New assets/Small Elements/Bell sprite animation1.png" id="1_wxs5e"]
@@ -29,7 +29,7 @@ animations = [{
 "texture": ExtResource("1_wxs5e")
 }],
 "loop": false,
-"name": &"Bell Riniging",
+"name": &"Bell Ringing",
 "speed": 5.0
 }, {
 "frames": [{

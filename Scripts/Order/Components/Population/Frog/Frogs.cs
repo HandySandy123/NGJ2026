@@ -32,18 +32,13 @@ public partial class Frogs : Population
 
     public override void _Process(double delta)
     {
-        if (!(timer.TimeLeft <= 0))
-        {
-            Hop();
-            timer.Start(hopTime);
-        }
         
     }
     
-    public override void Spawn(int X, int Y)
+    public override void Spawn(float X, float Y)
     {
         CreateTexture(ChooseColor(), 0, 0);
-        Position = new Vector2(X, Y);
+        GlobalPosition = new Vector2(X, Y);
     }
 
     private Color ChooseColor()
@@ -60,14 +55,15 @@ public partial class Frogs : Population
 
     protected override void Hop()
     {
-        var X = (float)GameManager.Instance.Random.Next(-10, 10)/10 * hopForce;
+        GD.Print("Hopping");
+        var X = (float)GameManager.Instance.Random.NextDouble() * Mathf.Pi;
         var Y =(float) -GameManager.Instance.Random.NextDouble() * hopForce;
         var vector = new Vector2(X, Y);
         //GD.Print(vector);
         if(Body != null)
         {
             //GD.Print("hopping");
-            Body.velocity += vector;
+            Body.Velocity += vector;
         }
     }
 }

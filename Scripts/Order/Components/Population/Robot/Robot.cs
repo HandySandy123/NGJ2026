@@ -9,9 +9,9 @@ public partial class Robot : Population
 	[Export] private RobotBody Body;
 	private Image img;
 	// Called when the node enters the scene tree for the first time.
-	public override void Spawn(int X, int Y)
+	public override void Spawn(float X, float Y)
 	{
-		img = Image.Create(1, 2, false, Image.Format.Rgb8);
+		img = Image.CreateEmpty(1, 2, false, Image.Format.Rgb8);
 		var Col = robotColors[GameManager.Instance.Random.Next(robotColors.Length)];
 		for (int i = 0; i < img.GetWidth() * img.GetHeight(); i++)
 		{
@@ -19,7 +19,7 @@ public partial class Robot : Population
 		}
 
 		sprite.Texture = ImageTexture.CreateFromImage(img);
-		Position = new Vector2(X, Y);
+		GlobalPosition = new Vector2(X, Y);
 	}
 
 	protected override void Hop()

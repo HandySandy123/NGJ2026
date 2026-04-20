@@ -1,12 +1,28 @@
-[gd_scene format=3 uid="uid://e1fttcfo8854"]
+[gd_scene format=3 uid="uid://cyynqlg2aaj5y"]
 
-[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_rsgd4"]
+[ext_resource type="Script" uid="uid://beq0673fqth5g" path="res://Levels/SP Levels/ChooseBiome/ChooseBiome.cs" id="1_pgoml"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Levels/Fridays Scenes/background.tscn" id="1_rsgd4"]
 [ext_resource type="Texture2D" uid="uid://ffiojb4say38" path="res://Art WIP/Dummy assets/BG Elements/2KitchenBackgroundSprite.png" id="2_itfjt"]
-[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI PIECES/UI decoration yellow_frame.tscn" id="3_2lk6l"]
-[ext_resource type="PackedScene" uid="uid://tjh4iijtvfwu" path="res://Fridays Scenes/UI PIECES/buttons_biome.tscn" id="4_pgoml"]
-[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/UI PIECES/buttons_orb_+_arrow.tscn" id="5_o36cr"]
+[ext_resource type="PackedScene" uid="uid://dl3xu5v87us3f" path="res://Scripts/Order/Components/Biome/IceWorld.tscn" id="2_uyevf"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Levels/Fridays Scenes/UI decoration yellow_frame.tscn" id="3_2lk6l"]
+[ext_resource type="PackedScene" uid="uid://brprx8trkgdd3" path="res://Scripts/Order/Components/Biome/RockWorld.tscn" id="3_ivwip"]
+[ext_resource type="PackedScene" uid="uid://tjh4iijtvfwu" path="res://Levels/Fridays Scenes/buttons_biome.tscn" id="4_pgoml"]
+[ext_resource type="PackedScene" uid="uid://b3falrgx01khi" path="res://Scripts/Order/Components/Biome/WaterWorld.tscn" id="4_y2b0f"]
+[ext_resource type="PackedScene" uid="uid://mb35prbbhexd" path="res://Scripts/Order/Components/Biome/DuckWorld.tscn" id="5_nf7t7"]
+[ext_resource type="Script" uid="uid://b5dj3uqb5pn8i" path="res://Fridays Scenes/OrbArrow.cs" id="10_4ccgr"]
+[ext_resource type="Texture2D" uid="uid://b1ju2vv1h3cvo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteNormal.png" id="11_pp0vj"]
+[ext_resource type="Texture2D" uid="uid://tqg775c14fpk" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteClickes.png" id="12_rgfty"]
+[ext_resource type="Texture2D" uid="uid://bi8vmuf3k3k1x" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteHover.png" id="13_0nem7"]
+[ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="14_oepno"]
+[ext_resource type="Texture2D" uid="uid://bd23t0ds6qqcq" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowClicked.png" id="15_48d20"]
+[ext_resource type="Texture2D" uid="uid://durcam2okanph" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowHover.png" id="16_cqf7o"]
+[ext_resource type="Script" uid="uid://c6mc2158v5etx" path="res://Fridays Scenes/BiomeContainer.cs" id="17_pp0vj"]
 
-[node name="Node2D" type="Node2D" unique_id=1913545592]
+[node name="Node2D" type="Node2D" unique_id=1913545592 node_paths=PackedStringArray("biomeSpot", "_orbArrow")]
+script = ExtResource("1_pgoml")
+biomeSpot = NodePath("biomePos")
+biomes = [ExtResource("2_uyevf"), ExtResource("3_ivwip"), ExtResource("4_y2b0f"), ExtResource("5_nf7t7")]
+_orbArrow = NodePath("PanelContainer/Buttons Orb + Arrow")
 
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_rsgd4")]
 
@@ -29,5 +45,42 @@ position = Vector2(146, 119)
 [node name="Buttons Biome" parent="PanelContainer" unique_id=215432349 instance=ExtResource("4_pgoml")]
 layout_mode = 2
 
-[node name="Buttons Orb + Arrow" parent="PanelContainer" unique_id=226686799 instance=ExtResource("5_o36cr")]
+[node name="Buttons Orb + Arrow" type="PanelContainer" parent="PanelContainer" unique_id=226686799 node_paths=PackedStringArray("orb", "arrow")]
+self_modulate = Color(0, 0, 0, 0)
+z_index = -1
 layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("10_4ccgr")
+orb = NodePath("HBoxContainer/Orb")
+arrow = NodePath("HBoxContainer/Arrow")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/Buttons Orb + Arrow" unique_id=223278335]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 201
+
+[node name="Orb" type="TextureButton" parent="PanelContainer/Buttons Orb + Arrow/HBoxContainer" unique_id=269357460]
+layout_mode = 2
+texture_normal = ExtResource("11_pp0vj")
+texture_pressed = ExtResource("12_rgfty")
+texture_hover = ExtResource("13_0nem7")
+
+[node name="Arrow" type="TextureButton" parent="PanelContainer/Buttons Orb + Arrow/HBoxContainer" unique_id=1458062619]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("14_oepno")
+texture_pressed = ExtResource("15_48d20")
+texture_hover = ExtResource("16_cqf7o")
+
+[node name="biomePos" type="Node2D" parent="." unique_id=760022874]
+position = Vector2(127, 133)
+script = ExtResource("17_pp0vj")
+
+[connection signal="pressed" from="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton" to="." method="setBiome" binds= [0]]
+[connection signal="pressed" from="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton2" to="." method="setBiome" binds= [1]]
+[connection signal="pressed" from="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton3" to="." method="setBiome" binds= [2]]
+[connection signal="pressed" from="PanelContainer/Buttons Biome/MarginContainer/Fat button row/TextureButton4" to="." method="setBiome" binds= [3]]
+[connection signal="pressed" from="PanelContainer/Buttons Orb + Arrow/HBoxContainer/Arrow" to="PanelContainer/Buttons Orb + Arrow" method="nextLevel" binds= [3]]
+
+[editable path="PanelContainer/Buttons Biome"]

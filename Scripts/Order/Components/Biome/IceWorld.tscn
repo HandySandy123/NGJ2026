@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dl3xu5v87us3f"]
 
-[ext_resource type="Texture2D" uid="uid://dyh0ss1abb51n" path="res://Art WIP/PhysicsOBJECTS/Planet/Ice planet.png" id="2_4hcgo"]
+[ext_resource type="Script" uid="uid://bgo3dnk13kkbt" path="res://Scripts/Order/Components/Biome/Biome.cs" id="1_gn3t5"]
+[ext_resource type="Texture2D" uid="uid://dyh0ss1abb51n" path="res://Art WIP/PhysicsOBJECTS/Planet/Ice planet.png" id="2_omhhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hcgo"]
 size = Vector2(5.3068438, 7.03648)
 
 [node name="Ice" type="Node2D" unique_id=963932696]
+script = ExtResource("1_gn3t5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729157121]
-texture = ExtResource("2_4hcgo")
+texture = ExtResource("2_omhhl")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2056281161]
 position = Vector2(-76, 15)

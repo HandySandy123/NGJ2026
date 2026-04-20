@@ -1,13 +1,18 @@
-[gd_scene format=3 uid="uid://c462w7138bew1"]
+[gd_scene format=3 uid="uid://dg4r1em783myk"]
 
+[ext_resource type="Script" uid="uid://d220pcun51i2d" path="res://Levels/Fridays Scenes/PhysicsObjects.cs" id="1_il2y1"]
 [ext_resource type="Script" uid="uid://b5dj3uqb5pn8i" path="res://Fridays Scenes/OrbArrow.cs" id="1_t1ajb"]
-[ext_resource type="PackedScene" uid="uid://xnf33h7thtif" path="res://Fridays Scenes/UI PIECES/buttons_geo_features.tscn" id="2_dorbb"]
-[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/UI PIECES/buttons_orb_+_arrow.tscn" id="3_b6rkl"]
-[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI PIECES/UI decoration yellow_frame.tscn" id="4_il2y1"]
-[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="5_4jdlp"]
-[ext_resource type="PackedScene" uid="uid://dqdoc7h8h03iq" path="res://Fridays Scenes/UI PIECES/IconsGeoFeatures.tscn" id="6_dorbb"]
+[ext_resource type="PackedScene" uid="uid://b3falrgx01khi" path="res://Scripts/Order/Components/Biome/WaterWorld.tscn" id="2_4jdlp"]
+[ext_resource type="PackedScene" uid="uid://xnf33h7thtif" path="res://Levels/Fridays Scenes/buttons_geo_features.tscn" id="2_dorbb"]
+[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Levels/Fridays Scenes/buttons_orb_+_arrow.tscn" id="3_b6rkl"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Levels/Fridays Scenes/UI decoration yellow_frame.tscn" id="4_il2y1"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Levels/Fridays Scenes/background.tscn" id="5_4jdlp"]
+[ext_resource type="PackedScene" uid="uid://dqdoc7h8h03iq" path="res://Levels/Fridays Scenes/IconsGeoFeatures.tscn" id="6_dorbb"]
 
-[node name="Node2D" type="Node2D" unique_id=1581284509]
+[node name="Node2D" type="Node2D" unique_id=1581284509 node_paths=PackedStringArray("biomeSpot")]
+script = ExtResource("1_il2y1")
+biomeScene = ExtResource("2_4jdlp")
+biomeSpot = NodePath("biomeSpot")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=693354995]
 self_modulate = Color(1, 1, 1, 0)
@@ -32,3 +37,7 @@ offset_left = 313.0
 offset_top = 3.0
 offset_right = 382.0
 offset_bottom = 232.0
+
+[node name="PhysicsObjectBrush" type="Node2D" parent="." unique_id=1581076465]
+
+[node name="biomeSpot" type="Node2D" parent="." unique_id=615043073]

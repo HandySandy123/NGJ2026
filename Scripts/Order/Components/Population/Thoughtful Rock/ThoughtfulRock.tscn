@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ca1jstk68pnmb"]
+
+[ext_resource type="Script" uid="uid://bbjvd2ajrif2v" path="res://Scripts/Order/Components/Population/Thoughtful Rock/ThoughtfulRock.cs" id="1_246hw"]
+[ext_resource type="Script" uid="uid://byxi04ynk7rje" path="res://Scripts/Order/Components/Population/Thoughtful Rock/RockBody.cs" id="2_wc0o0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w74qm"]
+radius = 1.0
+
+[node name="ThoughtfulRock" type="Node2D" unique_id=336716133 node_paths=PackedStringArray("Body", "sprite")]
+script = ExtResource("1_246hw")
+rockColor = Color(0.3137255, 0.3137255, 0.42745098, 1)
+Body = NodePath("CharacterBody2D")
+sprite = NodePath("CharacterBody2D/Sprite2D")
+PopName = "Thoughtful Rock"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=602867873]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_wc0o0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=628008059]
+shape = SubResource("CircleShape2D_w74qm")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=472114757]
