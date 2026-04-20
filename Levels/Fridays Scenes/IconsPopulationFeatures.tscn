@@ -2,26 +2,158 @@
 
 [ext_resource type="Texture2D" uid="uid://bxqnssio00j8l" path="res://Art WIP/New assets/Small Elements/Shakers sprite3.png" id="1_fd2lg"]
 [ext_resource type="Texture2D" uid="uid://cmikjh5vwwdne" path="res://Art WIP/New assets/Small Elements/Shakers sprite4.png" id="2_7a3v6"]
+[ext_resource type="Texture2D" uid="uid://q5asceshvieo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_normal.png" id="2_sclt5"]
+[ext_resource type="Texture2D" uid="uid://c0b473holxhns" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_pressed.png" id="3_4ly2g"]
 [ext_resource type="Texture2D" uid="uid://dx4xtuxei86kb" path="res://Art WIP/New assets/Small Elements/Shakers sprite2.png" id="3_rc3wc"]
+[ext_resource type="Texture2D" uid="uid://d1vhyu5cki8x8" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/LongButton_hover.png" id="4_0buoc"]
 [ext_resource type="Texture2D" uid="uid://bnvydufpl1jh" path="res://Art WIP/New assets/Small Elements/Shakers sprite1.png" id="4_1t33i"]
+[ext_resource type="FontFile" uid="uid://ctrsralxyluw4" path="res://Art WIP/Dummy assets/Fonts/PocketPixelRegular-6gdY.ttf" id="5_e713f"]
 
-[node name="VBoxContainer" type="VBoxContainer" unique_id=1970223924]
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 14
+[sub_resource type="Theme" id="Theme_u3mqv"]
 
-[node name="Frogs" type="TextureRect" parent="." unique_id=1100708444]
+[node name="MarginContainer" type="MarginContainer" unique_id=1054856462]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+offset_right = 113.0
+offset_bottom = 257.0
+
+[node name="Long Buttons" type="VBoxContainer" parent="." unique_id=1650945309]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Frogs" type="VBoxContainer" parent="Long Buttons" unique_id=1511902472]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="MarginContainer" type="MarginContainer" parent="Long Buttons/Frogs" unique_id=1423263344]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_right = 52
+
+[node name="FrogsCan" type="TextureRect" parent="Long Buttons/Frogs/MarginContainer" unique_id=1100708444]
 layout_mode = 2
 texture = ExtResource("1_fd2lg")
+flip_h = true
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1172898412]
+[node name="FrogButt" type="TextureButton" parent="Long Buttons/Frogs" unique_id=575974208]
+layout_mode = 2
+texture_normal = ExtResource("2_sclt5")
+texture_pressed = ExtResource("3_4ly2g")
+texture_hover = ExtResource("4_0buoc")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Long Buttons/Frogs/FrogButt" unique_id=1612465530]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8599987
+offset_right = 137.61644
+offset_bottom = 18.859999
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("5_e713f")
+text = "frogs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HotBabes" type="VBoxContainer" parent="Long Buttons" unique_id=1015020681]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="MarginContainer" type="MarginContainer" parent="Long Buttons/HotBabes" unique_id=1380816934]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 0
+
+[node name="BabesCan" type="TextureRect" parent="Long Buttons/HotBabes/MarginContainer" unique_id=1172898412]
 layout_mode = 2
 texture = ExtResource("2_7a3v6")
 
-[node name="TextureRect3" type="TextureRect" parent="." unique_id=388024876]
+[node name="BabesButt" type="TextureButton" parent="Long Buttons/HotBabes" unique_id=1000759622]
+layout_mode = 2
+texture_normal = ExtResource("2_sclt5")
+texture_pressed = ExtResource("3_4ly2g")
+texture_hover = ExtResource("4_0buoc")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Long Buttons/HotBabes/BabesButt" unique_id=1269102939]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("5_e713f")
+text = "hot babes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Robots" type="VBoxContainer" parent="Long Buttons" unique_id=76861088]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="MarginContainer2" type="MarginContainer" parent="Long Buttons/Robots" unique_id=176653332]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_right = 51
+
+[node name="RobotsCan" type="TextureRect" parent="Long Buttons/Robots/MarginContainer2" unique_id=388024876]
 layout_mode = 2
 texture = ExtResource("3_rc3wc")
+flip_h = true
 
-[node name="TextureRect4" type="TextureRect" parent="." unique_id=674675447]
+[node name="Robutt" type="TextureButton" parent="Long Buttons/Robots" unique_id=2103550545]
+layout_mode = 2
+texture_normal = ExtResource("2_sclt5")
+texture_pressed = ExtResource("3_4ly2g")
+texture_hover = ExtResource("4_0buoc")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Long Buttons/Robots/Robutt" unique_id=1181080421]
+layout_mode = 0
+offset_left = 5.0000153
+offset_top = 0.8600006
+offset_right = 137.61644
+offset_bottom = 18.86
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("5_e713f")
+text = "robots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="thoughtfulRocks" type="VBoxContainer" parent="Long Buttons" unique_id=628856322]
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="MarginContainer2" type="MarginContainer" parent="Long Buttons/thoughtfulRocks" unique_id=312136429]
+layout_mode = 2
+theme_override_constants/margin_left = 46
+theme_override_constants/margin_right = 14
+
+[node name="RocksCan" type="TextureRect" parent="Long Buttons/thoughtfulRocks/MarginContainer2" unique_id=674675447]
 layout_mode = 2
 texture = ExtResource("4_1t33i")
+
+[node name="RocksButt" type="TextureButton" parent="Long Buttons/thoughtfulRocks" unique_id=822336302]
+layout_mode = 2
+texture_normal = ExtResource("2_sclt5")
+texture_pressed = ExtResource("3_4ly2g")
+texture_hover = ExtResource("4_0buoc")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Long Buttons/thoughtfulRocks/RocksButt" unique_id=1148217069]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.85998535
+offset_right = 137.61642
+offset_bottom = 18.859985
+scale = Vector2(0.65, 0.65)
+theme = SubResource("Theme_u3mqv")
+theme_override_fonts/font = ExtResource("5_e713f")
+text = "thoughtful rock"
+horizontal_alignment = 1
+vertical_alignment = 1

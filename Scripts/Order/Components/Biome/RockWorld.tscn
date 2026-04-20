@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://brprx8trkgdd3"]
 
 [ext_resource type="Texture2D" uid="uid://dpfr1r88wb2t" path="res://Art WIP/PhysicsOBJECTS/Planet/Rock planet.png" id="1_1bw0l"]
+[ext_resource type="Script" uid="uid://bgo3dnk13kkbt" path="res://Scripts/Order/Components/Biome/Biome.cs" id="1_kxo77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hcgo"]
 size = Vector2(5.404666, 10.0521145)
 
 [node name="Rock" type="Node2D" unique_id=963932696]
+script = ExtResource("1_kxo77")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729157121]
 position = Vector2(0, 2)

@@ -7,22 +7,32 @@ public partial class HotBabes : Population
 {
 	[Export] private Color[] HotBabesTops;
 	[Export] private Color[] HotBabesBottoms;
-
+	[Export] private HotBabesBody body;
 	private Image img;
 	// Called when the node enters the scene tree for the first time.
-	public override void Spawn(int X, int Y)
+	public override void Spawn(float X, float Y)
 	{
 		img = Image.CreateEmpty(1, 2, false, Image.Format.Rgb8);
 		var ColA = GameManager.Instance.Random.Next(HotBabesTops.Length);
 		var ColB = GameManager.Instance.Random.Next(HotBabesBottoms.Length);
 		CreateTexture(HotBabesTops[ColA], 0, 0);
 		CreateTexture(HotBabesBottoms[ColB], 0, 1);
-		Position = new Vector2(X, Y);
+		GlobalPosition = new Vector2(X, Y);
 	}
 
 	protected override void Hop()
 	{
-		throw new NotImplementedException();
+		var left = GameManager.Instance.Random.NextDouble();
+		var yStrenght = -40f;
+		if (left < 0.5)
+		{
+			body.Velocity += new Vector2(hopForce, yStrenght);
+		}
+		else
+		{
+			body.Velocity += new Vector2(-hopForce, yStrenght);
+		}
+		GD.Print("Babe Hop");
 	}
 
 	public override void _EnterTree()

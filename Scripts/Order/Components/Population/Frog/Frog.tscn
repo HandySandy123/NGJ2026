@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dmlmlv4i80ogc" path="res://Scripts/Order/Components/Population/Frog/Frogs.cs" id="1_yxu3o"]
 [ext_resource type="Script" uid="uid://dcame2x5d4of2" path="res://Scripts/Order/Components/Population/Frog/FrogBody.cs" id="2_6apwi"]
+[ext_resource type="Script" uid="uid://nsxxgmdmy3kx" path="res://addons/vector_display_2d/vector_display_2d.gd" id="3_7bob3"]
+[ext_resource type="Script" uid="uid://cg1yrpfmjvsi" path="res://addons/vector_display_2d/vector_display_settings.gd" id="4_ew42o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6apwi"]
 radius = 1.0
+
+[sub_resource type="Resource" id="Resource_uav8o"]
+script = ExtResource("4_ew42o")
+metadata/_custom_type_script = "uid://cg1yrpfmjvsi"
 
 [node name="Frog" type="Node2D" unique_id=64494044 node_paths=PackedStringArray("timer", "Body", "sprite")]
 z_index = 7
@@ -30,5 +36,13 @@ shape = SubResource("CircleShape2D_6apwi")
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1891871231]
 
 [node name="Timer" type="Timer" parent="." unique_id=2073432240]
-wait_time = 5.0
 autostart = true
+
+[node name="VectorDisplay2D" type="Node2D" parent="." unique_id=11122592 node_paths=PackedStringArray("target_node")]
+visible = false
+script = ExtResource("3_7bob3")
+target_node = NodePath("../RigidBody2D")
+settings = SubResource("Resource_uav8o")
+metadata/_custom_type_script = "uid://nsxxgmdmy3kx"
+
+[connection signal="timeout" from="Timer" to="." method="Hop"]

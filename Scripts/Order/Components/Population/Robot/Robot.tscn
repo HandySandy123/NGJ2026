@@ -18,6 +18,8 @@ SlimeDustScore = 1.0
 metadata/_edit_pinned_properties_ = [&"PopName"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1956102994]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("2_2qxj8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=691051355]

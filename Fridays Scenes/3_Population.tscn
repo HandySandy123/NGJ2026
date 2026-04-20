@@ -1,29 +1,119 @@
-[gd_scene format=3 uid="uid://dmfd0ghybkjh0"]
+[gd_scene format=3 uid="uid://chciypmqe0thv"]
 
-[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Fridays Scenes/background.tscn" id="1_qdc31"]
-[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Fridays Scenes/UI PIECES/UI decoration yellow_frame.tscn" id="2_mg3ph"]
-[ext_resource type="PackedScene" uid="uid://cv04ig1whhqu2" path="res://Fridays Scenes/UI PIECES/buttons_orb_+_arrow.tscn" id="3_kb24g"]
-[ext_resource type="PackedScene" uid="uid://cjyeavao66gei" path="res://Fridays Scenes/UI PIECES/buttons_population.tscn" id="4_irggu"]
-[ext_resource type="PackedScene" uid="uid://deijis8ydnbh3" path="res://Fridays Scenes/UI PIECES/IconsPopulationFeatures.tscn" id="5_aew7q"]
+[ext_resource type="PackedScene" uid="uid://bha71de5yb72b" path="res://Levels/Fridays Scenes/background.tscn" id="1_qdc31"]
+[ext_resource type="Script" uid="uid://dgx7ikx7wv622" path="res://Fridays Scenes/AddPopulation.cs" id="1_x1ose"]
+[ext_resource type="PackedScene" uid="uid://bpg34qc1fdxq5" path="res://Levels/Fridays Scenes/UI decoration yellow_frame.tscn" id="2_mg3ph"]
+[ext_resource type="PackedScene" uid="uid://b3falrgx01khi" path="res://Scripts/Order/Components/Biome/WaterWorld.tscn" id="2_mo01n"]
+[ext_resource type="PackedScene" uid="uid://p5h81q42c210" path="res://Scripts/Order/Components/Population/Frog/Frog.tscn" id="3_y80p2"]
+[ext_resource type="PackedScene" uid="uid://bi5raiyhe0il1" path="res://Scripts/Order/Components/Population/Hot Babes/HotBabes.tscn" id="4_f67nm"]
+[ext_resource type="PackedScene" uid="uid://deijis8ydnbh3" path="res://Levels/Fridays Scenes/IconsPopulationFeatures.tscn" id="5_aew7q"]
+[ext_resource type="PackedScene" uid="uid://clwirmnjsyjhi" path="res://Scripts/Order/Components/Population/Robot/Robot.tscn" id="5_cjot0"]
+[ext_resource type="PackedScene" uid="uid://cu2fat4qwoqpj" path="res://Scripts/PopulationBrush/population_brush.tscn" id="5_d7mui"]
+[ext_resource type="PackedScene" uid="uid://ca1jstk68pnmb" path="res://Scripts/Order/Components/Population/Thoughtful Rock/ThoughtfulRock.tscn" id="6_mo01n"]
+[ext_resource type="Script" uid="uid://b5dj3uqb5pn8i" path="res://Fridays Scenes/OrbArrow.cs" id="10_37gcb"]
+[ext_resource type="Texture2D" uid="uid://b1ju2vv1h3cvo" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteNormal.png" id="11_5yd2f"]
+[ext_resource type="Texture2D" uid="uid://tqg775c14fpk" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteClickes.png" id="12_5gpnx"]
+[ext_resource type="Script" uid="uid://rqm1f8j2bpqk" path="res://Fridays Scenes/PopulationBoundary.cs" id="12_y80p2"]
+[ext_resource type="Texture2D" uid="uid://bi8vmuf3k3k1x" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/OrbspriteHover.png" id="13_qsmay"]
+[ext_resource type="Texture2D" uid="uid://d02lew6bm1cer" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowNormal.png" id="14_b57nl"]
+[ext_resource type="Texture2D" uid="uid://bd23t0ds6qqcq" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowClicked.png" id="15_iunkg"]
+[ext_resource type="Texture2D" uid="uid://durcam2okanph" path="res://Art WIP/Dummy assets/Button + UI Assets/PNGs/ForwardsArrowHover.png" id="16_qx8vk"]
 
-[node name="Node2D" type="Node2D" unique_id=2129050600]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f67nm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y80p2"]
+size = Vector2(267, 220)
+
+[node name="Node2D" type="Node2D" unique_id=2129050600 node_paths=PackedStringArray("biomeSpot")]
+script = ExtResource("1_x1ose")
+biomeScene = ExtResource("2_mo01n")
+biomeSpot = NodePath("biomeSpot")
+
+[node name="PopulationBrush" parent="." unique_id=1367516449 instance=ExtResource("5_d7mui")]
+radius = 10.0
+_populations = Array[PackedScene]([ExtResource("3_y80p2"), ExtResource("4_f67nm"), ExtResource("5_cjot0"), ExtResource("6_mo01n")])
 
 [node name="Background" parent="." unique_id=1711593448 instance=ExtResource("1_qdc31")]
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1353054585]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 240)
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" parent="PanelContainer" unique_id=1970223924 instance=ExtResource("5_aew7q")]
-position = Vector2(283, -3)
-
-[node name="YellowFrame" parent="PanelContainer" unique_id=269234448 instance=ExtResource("2_mg3ph")]
+[node name="YellowFrame2" parent="." unique_id=269234448 instance=ExtResource("2_mg3ph")]
 position = Vector2(146, 119)
 
-[node name="Buttons Orb + Arrow" parent="PanelContainer" unique_id=226686799 instance=ExtResource("3_kb24g")]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=202227012]
+custom_minimum_size = Vector2(400, 240)
+offset_right = 403.0
+offset_bottom = 256.0
+theme_override_constants/separation = -4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=585703216]
 layout_mode = 2
 
-[node name="Buttons Population" parent="PanelContainer" unique_id=569575255 instance=ExtResource("4_irggu")]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer2" unique_id=760247952]
 layout_mode = 2
+theme_override_constants/margin_top = 192
+
+[node name="Buttons Orb + Arrow" type="PanelContainer" parent="HBoxContainer/VBoxContainer2" unique_id=226686799 node_paths=PackedStringArray("orb", "arrow")]
+self_modulate = Color(0, 0, 0, 0)
+z_index = -1
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("10_37gcb")
+orb = NodePath("HBoxContainer/MarginContainer/Orb")
+arrow = NodePath("HBoxContainer/MarginContainer2/Arrow")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/Buttons Orb + Arrow" unique_id=223278335]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 201
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer2/Buttons Orb + Arrow/HBoxContainer" unique_id=556430703]
+layout_mode = 2
+
+[node name="Orb" type="TextureButton" parent="HBoxContainer/VBoxContainer2/Buttons Orb + Arrow/HBoxContainer/MarginContainer" unique_id=269357460]
+layout_mode = 2
+texture_normal = ExtResource("11_5yd2f")
+texture_pressed = ExtResource("12_5gpnx")
+texture_hover = ExtResource("13_qsmay")
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer2/Buttons Orb + Arrow/HBoxContainer" unique_id=1229010080]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(54, 30)
+layout_mode = 2
+
+[node name="Arrow" type="TextureButton" parent="HBoxContainer/VBoxContainer2/Buttons Orb + Arrow/HBoxContainer/MarginContainer2" unique_id=1458062619]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = ExtResource("14_b57nl")
+texture_pressed = ExtResource("15_iunkg")
+texture_hover = ExtResource("16_qx8vk")
+
+[node name="VBoxContainer" parent="HBoxContainer" unique_id=1970223924 instance=ExtResource("5_aew7q")]
+z_index = 4
+layout_mode = 2
+
+[node name="biomeSpot" type="Node2D" parent="." unique_id=1856127622]
+
+[node name="RigidBody2D" type="Area2D" parent="." unique_id=648794678]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("12_y80p2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=931168685]
+position = Vector2(147, 281)
+shape = SubResource("WorldBoundaryShape2D_f67nm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=273936533]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=185466640]
+position = Vector2(145.5, 119)
+shape = SubResource("RectangleShape2D_y80p2")
+
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/Long Buttons/Frogs/FrogButt" to="PopulationBrush" method="setPopulation" binds= [0]]
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/Long Buttons/HotBabes/BabesButt" to="PopulationBrush" method="setPopulation" binds= [1]]
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/Long Buttons/Robots/Robutt" to="PopulationBrush" method="setPopulation" binds= [2]]
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/Long Buttons/thoughtfulRocks/RocksButt" to="PopulationBrush" method="setPopulation" binds= [3]]
+[connection signal="mouse_entered" from="Area2D" to="PopulationBrush" method="CanDraw" binds= [true]]
+[connection signal="mouse_exited" from="Area2D" to="PopulationBrush" method="CanDraw" binds= [false]]
+
+[editable path="PopulationBrush"]
+[editable path="HBoxContainer/VBoxContainer"]
